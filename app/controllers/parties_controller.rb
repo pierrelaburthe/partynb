@@ -38,7 +38,7 @@ before_action :set_party, only: [:show, :edit, :destroy]
 
   private
   def set_party
-    @party = party.find(params[:id])
+    @party = Party.find(params[:id])
   end
 
   def party_params
