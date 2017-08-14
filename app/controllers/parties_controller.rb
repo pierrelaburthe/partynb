@@ -7,7 +7,6 @@ before_action :set_party, only: [:show, :edit, :destroy]
   end
 
   def show
-    @party = Party.new
   end
 
   def new
@@ -27,7 +26,7 @@ before_action :set_party, only: [:show, :edit, :destroy]
   end
 
   def update
-    @party= party.update(party_params)
+    @party.update(party_params)
     redirect_to party_path(@party)
   end
 
