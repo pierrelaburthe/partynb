@@ -1,0 +1,22 @@
+<h1>Your bookings</h1>
+
+<ul>
+
+  <% @user.bookings do |booking| %>
+    <li>
+      <%= booking.party.title %>
+    </li>
+  <% end %>
+</ul>
+
+
+<h1> Your hosted parties </h1>
+
+<ul>
+
+  <% @user.parties do |party| %>
+    <li>
+      <%= party.title %>
+    </li>
+  <% end %>
+</ul>
