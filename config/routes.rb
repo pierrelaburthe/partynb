@@ -5,7 +5,6 @@ Rails.application.routes.draw do
     resources :bookings
   end
 
-  resources :users, except: [:delete] do
-    resources :bookings
-  end
+  resources :users, except: [:delete]
+
 end
