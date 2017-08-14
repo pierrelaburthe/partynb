@@ -10,10 +10,33 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170814141418) do
+ActiveRecord::Schema.define(version: 20170814143341) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "bookings", force: :cascade do |t|
+    t.integer  "user_id"
+    t.integer  "party_id"
+    t.integer  "participant_count"
+    t.string   "status"
+    t.datetime "created_at",        null: false
+    t.datetime "updated_at",        null: false
+    t.index ["party_id"], name: "index_bookings_on_party_id", using: :btree
+    t.index ["user_id"], name: "index_bookings_on_user_id", using: :btree
+  end
+
+  create_table "parties", force: :cascade do |t|
+    t.string   "title"
+    t.integer  "capacity"
+    t.string   "music_type"
+    t.integer  "price"
+    t.datetime "occurs_at"
+    t.integer  "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_parties_on_user_id", using: :btree
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "mail"
@@ -24,4 +47,7 @@ ActiveRecord::Schema.define(version: 20170814141418) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "bookings", "parties"
+  add_foreign_key "bookings", "users"
+  add_foreign_key "parties", "users"
 end
