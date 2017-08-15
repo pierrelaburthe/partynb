@@ -4,7 +4,7 @@
 <ul>
   <% @user.bookings.each do |booking| %>
     <li>
-      <%= booking.party.title %>
+      <%= link_to booking.party.title, party_path(@party) %>
     </li>
   <% end %>
 </ul>

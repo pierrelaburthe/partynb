@@ -10,6 +10,7 @@ before_action :set_booking, only: [:show, :edit, :destroy]
   end
 
   def show
+    @party = @booking.party
   end
 
   def new
