@@ -1,28 +1,55 @@
 // Specific CSS for your home-page
 // Import page-specific CSS files here.
 
-.wrapper-white {
-background-color: white;
+.wrapper-parties {
 display: flex;
 flex-direction: row;
 }
+
 .card-party {
-background-color: rgb(220,220, 220);
+background-color: rgba(255,255,255, 0.4);
 border-style: solid;
 border-width: 1px;
 width: 500px;
 margin: 50px;
+border-radius: 4px;
+height: 175px;
+color: white;
+position: relative;
 }
 
-* {
-    margin: 0;
+
+.card-description {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
 }
-html, body {
-    height: 100%;
+.card-description h2 {
+  font-size: 24px;
 }
-.wrapper {
-    min-height: 100%;
-    height: auto !important;
-    height: 100%;
-    margin: 0 auto -142px; /* the bottom margin is the negative value of the footer's height */
+.card-description p {
+  font-size: 14px;
+  font-weight: lighter;
+}
+
+
+.message {
+  color: white;
+  letter-spacing: 10px;
+}
+
+.banner-content {
+
+  text-align: center;
+  margin-top: 0px;
+
+  h1{
+  padding-top: 100px;
+  margin-top:0px;
+  }
+}
+
+.banner {
+  height:90vh;
+  background-size: cover;
 }

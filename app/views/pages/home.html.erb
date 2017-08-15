@@ -1,2 +1,27 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+
+<div class="banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('https://cecietantdit.files.wordpress.com/2012/03/project-x-image-25.jpg');">
+  <div class="banner-content">
+        <%= render 'shared/navbar' %>
+      <%= render 'shared/flashes' %>
+    <h1 class = "message" >BOOK A HOUSE PARTY</h1>
+<!--     <p>Enjoy your stay in Berlin</p>
+ -->
+
+  <div class="container" id="home-flats">
+    <h2 class="message">Parties near you</h2>
+
+    <div class="wrapper-parties">
+      <% @parties.each do |party| %>
+        <div class="card-party">
+          <h2><%=  party.title %></h2>
+          <p>
+          <h5><%= party.capacity %> people wanted!</h5>
+          <h5 card-description>music type: <%= party.music_type %> </h5>
+          </p>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
+
+</div>
