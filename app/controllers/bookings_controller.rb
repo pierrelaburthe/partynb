@@ -1,5 +1,6 @@
 class BookingsController < ApplicationController
 
+
 before_action :set_user, only: [:create]
 before_action :set_party
 before_action :set_booking, only: [:show, :edit, :destroy]
@@ -18,10 +19,11 @@ before_action :set_booking, only: [:show, :edit, :destroy]
   def create
     @booking= Booking.new(booking_params)
     @booking.party = @party
+    @booking.user = @user
     if @booking.save
      redirect_to user_path(@user)
     else
-      render :new
+      render "parties/show"
     end
   end
 
@@ -48,7 +50,7 @@ before_action :set_booking, only: [:show, :edit, :destroy]
   end
 
   def set_user
-    @user = User.find(params[:user_id])
+    @user = current_user
   end
 
   def booking_params

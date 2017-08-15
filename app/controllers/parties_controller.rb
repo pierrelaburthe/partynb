@@ -1,5 +1,7 @@
 class PartiesController < ApplicationController
 
+skip_before_action :authenticate_user!, only: [:show, :index]
+
 before_action :set_party, only: [:show, :edit, :destroy]
 
   def index
@@ -7,6 +9,7 @@ before_action :set_party, only: [:show, :edit, :destroy]
   end
 
   def show
+    @booking = Booking.new
   end
 
   def new
