@@ -1,7 +1,32 @@
-<h1><%=  @party.title %></h1>
-<h1><%=  @party.capacity %></h1>
-<h1><%=  @party.music_type %> </h1>
-<h1><%=  @party.user_id %></h1>
 
-<h1>Book now!</h1>
- <%= render 'bookings/form' %>
+<h1>Party details</h1>
+
+
+<h4><%=  @party.title %></h1>
+<h4><%=  @party.capacity %></h1>
+<h4><%=  @party.music_type %> </h1>
+<h4><%=  @party.user_id %></h1>
+
+
+<% if Booking.where(party_id: @party.id).where(user_id: current_user.id).nil?  %>
+
+  <h1>Book now!</h1>
+  <%= render 'bookings/form' %>
+
+<% elsif @party.user_id == current_user.id %>
+
+  <h1>Thank you for hosting this party!</h1>
+  <h3>Your demands</h3>
+
+
+<% else %>
+
+  <h3> Vous avez déjà fait une demande </h3>
+  <h4> Annulez votre réservation </h4>
+<% end %>
+
+
+
+
+
+

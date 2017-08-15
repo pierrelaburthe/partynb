@@ -12,6 +12,8 @@
 
    <div class="wrapper-shared">
 
+   <%= render 'shared/navbar' %>
+
       <%= yield %>
 
        <p class="notice"><%= notice %></p>
@@ -19,7 +21,6 @@
       <%= javascript_include_tag 'application' %>
   </div>
 
-  <%= render 'shared/footer' %>
 
   </body>
 </html>

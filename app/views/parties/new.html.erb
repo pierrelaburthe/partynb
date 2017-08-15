@@ -1,10 +1,23 @@
-<h1>Host a party!</h1>
+<div class="container">
 
-<%= simple_form_for @party do |f| %>
-<%= f.input :title %>
-<%= f.input :capacity %>
-<%= f.input :music_type %>
-<%= f.input :price %>
-<%= f.input :occurs_at %>
-<%= f.submit class: "btn btn-success button-margin" %>
-<% end %>
+  <div class="row">
+
+    <div class="col-md-offset-4 col-md-4">
+
+      <h1>Host a party!</h1>
+
+      <%= simple_form_for @party do |f| %>
+      <%= f.input :title %>
+      <%= f.input :capacity %>
+      <%= f.input :music_type %>
+      <%= f.input :price %>
+      <%= f.input :occurs_at %>
+      <%= f.submit class: "btn btn-success button-margin" %>
+      <% end %>
+
+    </div>
+
+  </div>
+
+
+</div>
