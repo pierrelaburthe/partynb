@@ -1,0 +1,9 @@
+<div class="wrapper-white">
+  <% @parties.each do |party| %>
+    <div class="card-party">
+      <h3><%=  party.title %></h3>
+      <h5><%= party.capacity %> people wanted!</h5>
+      <h5>music type: <%= party.music_type %> </h5>
+    </div>
+  <% end %>
+</div>
