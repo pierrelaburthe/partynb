@@ -12,5 +12,21 @@ border-style: solid;
 border-width: 1px;
 width: 500px;
 margin: 50px;
+<<<<<<< HEAD
 
+=======
+}
+
+* {
+    margin: 0;
+}
+html, body {
+    height: 100%;
+}
+.wrapper {
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    margin: 0 auto -142px; /* the bottom margin is the negative value of the footer's height */
+>>>>>>> 37db207ecd654464f7eecd656bd53306e3e6a1e5
 }

@@ -4,6 +4,7 @@
       <h3><%=  party.title %></h3>
       <h5><%= party.capacity %> people wanted!</h5>
       <h5>music type: <%= party.music_type %> </h5>
+      <%= link_to "Join this party", party_path(party) %>
     </div>
   <% end %>
 </div>
