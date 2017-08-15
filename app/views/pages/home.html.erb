@@ -9,12 +9,13 @@
 
     <div class="wrapper-parties">
 
+
       <% @parties.last(3).each do |party| %>
          <div class="card-party">
             <h2 class ="card-party-title"><%=  party.title %></h2>
             <h1 id= "capacity-number"> <%= party.capacity %></h1>
             <h5 class="capacity-spots"> spots remaining</h5>
-
+          <%= link_to "", party_path(party), class:"card-link" %>
             <h5 class ="card-party-music">theme: <strong><%= party.music_type %> </strong> </h5>
 
          </div>

@@ -47,6 +47,13 @@ margin: 20px;
   }
 }
 
+.alert {
+  display: none;
+}
+.notice {
+  display: none;
+}
+
 .card-party-title {
     position: absolute;
     top: 10px;
@@ -59,7 +66,7 @@ margin: 20px;
       height:60px;
       width:60px;
         padding-top: 12px;
-    margin-top: 30px;
+    margin-top: 60px;
     margin-bottom:0px;
       font-weight: lighter;
       border-style: solid;
@@ -72,11 +79,14 @@ margin: 20px;
     }
     }
 
-.capacity-spot{
+.capacity-spots{
       padding: 0px;
     margin: 0px;
-opacity:0.5;
-}
+  opacity:0.5;
+    font-size: 14px;
+  }
+
+
 
 .card-party-music {
     position: absolute;
@@ -84,4 +94,18 @@ opacity:0.5;
     left: 10px;
     margin-top: 0px;
     font-size: 14px;
+}
+
+.card-link {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  z-index: 2;
+  background: black;
+  opacity: 0;
+}
+.card-link:hover {
+  opacity: 0.1;
 }
