@@ -12,8 +12,10 @@
 
         <div class="card-party">
           <h2 class ="card-party-title"><%=  party.title %></h2>
-          <h5 class ="card-party-capacity"><%= party.capacity %> people wanted!</h5>
-          <h5 class ="card-party-music">music type: <%= party.music_type %> </h5>
+          <h1 id= "capacity-number"> <%= party.capacity %></h1>
+          <h5 class="capacity-spots"> spots remaining</h5>
+
+          <h5 class ="card-party-music">theme: <strong><%= party.music_type %> </strong> </h5>
         </div>
 
       <% end %>
