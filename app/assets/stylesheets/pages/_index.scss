@@ -1,2 +1,101 @@
 // Import page-specific CSS files here.
 @import "home";
+
+
+
+.card-party {
+border-style: solid;
+width: 100%;
+border-radius: 4px;
+height: 30vh;
+color: white;
+padding: 8px;
+text-align:center;
+margin: auto;
+font-size: 20px;
+background-size: cover;
+position: relative;
+align-items: center;
+margin: 20px;
+}
+
+.btn-danger {
+  background-color: transparent;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 2px;
+  transition: background 0.3s ease;
+  margin: auto;
+  width: 150px;
+    &:hover {
+    opacity: 1;
+    text-decoration: none;
+    }
+    a{
+      color: white;
+      text-decoration: none;
+    }
+}
+
+.card-description {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  h2 {
+  font-size: 24px;
+  }
+}
+
+.card-party-title {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    margin-top: 0px;
+    font-size: 18px;
+}
+
+.card-party-capacity {
+text-align:center;
+    margin: auto;
+    font-size: 20px;
+    margin-top: 0px;
+        top: 60px;
+    right: 172px;
+
+    .capacity-number{
+      height:50px;
+    width:50px;
+    border-style: solid;
+    font-weight: lighter;
+    border-width: 1px;
+    border-radius: 50%;
+    padding: 10px;
+    // font-size: 10px;
+
+    font-size: 30px;
+    }
+}
+
+.card-party-music {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    margin-top: 0px;
+    font-size: 14px;
+}
+// .card-user {
+//   position: absolute;
+//   right: 10px;
+//   top: 10px;
+//   width: 40px;
+//   border-radius: 50%;
+// }
+// .card-category {
+//   position: absolute;
+//   top: 10px;
+//   left: 10px;
+//   font-size: 15px;
+//   text-transform: uppercase;
+// }
+
+

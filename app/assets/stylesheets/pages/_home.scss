@@ -1,64 +1,10 @@
 // Specific CSS for your home-page
 // Import page-specific CSS files here.
 
-
-
 .wrapper-parties {
 display: flex;
 flex-direction: row;
 }
-
-.card-party {
-border-style: solid;
-width: 100%;
-border-radius: 4px;
-height: 100%;
-color: white;
-padding: 8px;
-text-align:center;
-margin: auto;
-font-size: 20px;
-background-size: cover;
-position: relative;
-align-items: center;
-
-}
-
-.btn-danger {
-  color: white;
-  padding: 10px 15px;
-  border-radius: 2px;
-  // font-weight: bold;
-  transition: background 0.3s ease;
-  text-decoration: none;
-  margin: auto;
-  width: 150px;
-  &:hover {
-  opacity: 1;
-  text-decoration: none;
-
-}
-a{
-  color: white;
-  text-decoration: none;
-
-}
-}
-
-
-.card-description {
-  position: absolute;
-  bottom: 10px;
-  left: 10px;
-}
-.card-description h2 {
-  font-size: 24px;
-}
-.card-description p {
-  font-size: 14px;
-  font-weight: lighter;
-}
-
 
 .message {
   color: white;
@@ -66,10 +12,8 @@ a{
 }
 
 .banner-content {
-
   text-align: center;
   margin-top: 0px;
-
   h1{
   padding-top: 100px;
   margin-top:0px;
@@ -81,31 +25,17 @@ a{
   background-size: cover;
 }
 
-.card-user {
-  position: absolute;
-  right: 10px;
-  top: 10px;
-  width: 40px;
-  border-radius: 50%;
-}
-.card-category {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  font-size: 15px;
-  text-transform: uppercase;
-}
 
-.card-link {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  width: 100%;
-  z-index: 2;
-  background: black;
-  opacity: 0;
-}
-.card-link:hover {
-  opacity: 0.1;
-}
+// .card-link {
+//   position: absolute;
+//   top: 0;
+//   bottom: 0;
+//   right: 0;
+//   width: 100%;
+//   z-index: 2;
+//   background: black;
+//   opacity: 0;
+// }
+// .card-link:hover {
+//   opacity: 0.1;
+// }
