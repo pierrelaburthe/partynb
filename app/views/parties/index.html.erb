@@ -5,17 +5,13 @@
     <% @parties.each do |party| %>
       <div class="card-party" style="background-image: linear-gradient(-225deg, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.3) 50%),url(<%=array.sample%>)">
 
-
           <h2 class ="card-party-title"><%=  party.title %></h2>
           <h1 id= "capacity-number"> <%= party.capacity %></h1>
           <h5 class="capacity-spots"> spots remaining</h5>
 
           <h5 class ="card-party-music">theme: <strong><%= party.music_type %> </strong> </h5>
         <div class="btn-danger">
-<!--           <%= link_to "Join", party_path(party) %>
- -->        </div>
-
-
+         </div>
 
       </div>
   <% end %>
