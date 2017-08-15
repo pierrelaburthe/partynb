@@ -18,6 +18,7 @@ before_action :set_party, only: [:show, :edit, :destroy]
 
   def create
     @party= Party.new(party_params)
+    @party.update(user_id: current_user.id)
     if @party.save
      redirect_to parties_path
     else
@@ -44,7 +45,7 @@ before_action :set_party, only: [:show, :edit, :destroy]
   end
 
   def party_params
-    params.require(:party).permit(:title, :capacity, :music_type, :price, :occurs_at, :user_id)
+    params.require(:party).permit(:title, :capacity, :music_type, :price, :occurs_at)
   end
 
 end

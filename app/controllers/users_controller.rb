@@ -17,7 +17,7 @@ class UsersController < ApplicationController
  end
 
  def show
-  @party = Party.find(params[:id])
+  @bookings = current_user.bookings
  end
 
  def edit
