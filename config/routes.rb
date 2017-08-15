@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
   root to: 'pages#home'
 
   resources :parties do
@@ -8,3 +9,4 @@ Rails.application.routes.draw do
   resources :users, except: [:delete]
 
 end
+
