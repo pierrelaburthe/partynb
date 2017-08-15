@@ -1,16 +1,34 @@
 
-<h1>Party details</h1>
+  <div class="banner-party" style="background-image: linear-gradient(-225deg, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.3) 50%), url('https://static.pexels.com/photos/105933/pexels-photo-105933.jpeg'); height: 50vh; background-position: center;">
+    <h2 class="party-title"><%=  @party.title %></h2>
 
+  </div>
+  
+  <div class="container-party">
+    <div class="header-party-details">
+      <div class="row">
+        <div class="col-xs-12 col-sm-6 col-sm-offset-1 container-details">
+          <div class="host-details"><%= image_tag "pierre.png", :class => "avatar"%>
+          <div class="avatar-text">
+          <h4><strong><%=  @party.title %></strong></h4>
+          <h5>by <strong> <%=  @party.user.name %> </strong></h5>
 
-<h4><%=  @party.title %></h1>
-<h4><%=  @party.capacity %></h1>
-<h4><%=  @party.music_type %> </h1>
-<h4><%=  @party.user_id %></h1>
+           </div>
+          </div>
+          <div class="party-info">
 
-
+          <h5><strong><%=  @party.capacity %></strong> people wanted!</h5>
+          <h5>music type: <strong><%=  @party.music_type %> </strong></h5>
+          </div>
+        </div>
+    </div>
+    </div>
+    
+    
+    
 <% if Booking.where(party_id: @party.id).where(user_id: current_user.id).nil?  %>
 
-  <h1>Book now!</h1>
+  <h1 class = "book" >Book now!</h1>
   <%= render 'bookings/form' %>
 
 <% elsif @party.user_id == current_user.id %>
@@ -24,9 +42,7 @@
   <h3> Vous avez déjà fait une demande </h3>
   <h4> Annulez votre réservation </h4>
 <% end %>
-
-
-
-
-
+    
+   
+</div>
 

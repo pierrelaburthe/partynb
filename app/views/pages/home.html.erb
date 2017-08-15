@@ -1,23 +1,24 @@
 
-<div class="banner" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('https://cecietantdit.files.wordpress.com/2012/03/project-x-image-25.jpg');">
+<div class="banner-home" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('https://cecietantdit.files.wordpress.com/2012/03/project-x-image-25.jpg');">
   <div class="banner-content">
       <%= render 'shared/flashes' %>
     <h1 class = "message" >BOOK A HOUSE PARTY</h1>
-<!--     <p>Enjoy your stay in Berlin</p>
- -->
 
   <div class="container" id="home-flats">
     <h2 class="message">Parties near you</h2>
 
     <div class="wrapper-parties">
+
       <% @parties.last(3).each do |party| %>
-        <div class="card-party">
-          <h2><%=  party.title %></h2>
-          <p>
-          <h5><%= party.capacity %> people wanted!</h5>
-          <h5><%= party.music_type %> </h5>
-          </p>
-        </div>
+         <div class="card-party">
+            <h2 class ="card-party-title"><%=  party.title %></h2>
+            <h1 id= "capacity-number"> <%= party.capacity %></h1>
+            <h5 class="capacity-spots"> spots remaining</h5>
+
+            <h5 class ="card-party-music">theme: <strong><%= party.music_type %> </strong> </h5>
+
+         </div>
+
       <% end %>
     </div>
   </div>
