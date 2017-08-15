@@ -1,23 +1,26 @@
-
-<h1>Your bookings</h1>
-
-<ul>
-  <% @user.bookings.each do |booking| %>
-    <li>
-      <%= link_to booking.party.title, party_path(@party) %>
-    </li>
-  <% end %>
-</ul>
-
-
-<h1> Your hosted parties </h1>
-
-<ul>
-  <% @user.parties.each do |party| %>
-    <li>
-      <%= party.title %>
-    </li>
-  <% end %>
-</ul>
-
-
+<%= render 'shared/navbar' %>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-6">
+      <h1>Your bookings</h1>
+        <ul>
+          <% @user.bookings.each do |booking| %>
+            <li>
+              <%= link_to booking.party.title, party_path(@party)
+               %>
+               <img src="../../assets/images/houseparty1.jpg" alt="">
+            </li>
+          <% end %>
+        </ul>
+    </div>
+    <div class="col-xs-6"">
+      <h1> Your hosted p-arties </h1>
+        <ul>
+          <% @user.parties.each do |party| %>
+            <li>
+              <%= link_to party.title, party_path(party) %>
+            </li>
+          <% end %>
+        </ul>
+    </div>
+</div>
