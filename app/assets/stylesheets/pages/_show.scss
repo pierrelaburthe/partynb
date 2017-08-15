@@ -1,0 +1,59 @@
+
+.container-party{
+  display: flex;
+  flex-direction: row;
+}
+
+.avatar {
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;
+  margin-top:15px;
+}
+
+.avatar-text{
+  margin-left:30px;
+}
+.banner-party{
+  height: 50vh;
+  background-position:center;
+      background-size: cover !important;
+      text-align: center;
+}
+.party-title {
+padding-top: 100px;
+margin-top:0px;
+    color: white;
+
+}
+.container-party{
+    justify-content: space-around;
+align-items: center;
+}
+
+.host-details {
+  // width: 200px;
+  display: flex;
+    flex-direction: row;
+}
+
+.party-info {
+// width: 400px;
+  display: flex;
+
+  flex-direction: row;
+  h5{
+padding: 10px;
+  }
+}
+
+.container-details{
+  background-color: white;
+      box-shadow: 0px 1px 5px rgba(0,0,0,0.1);
+  width: 400px;
+    display: flex;
+  flex-direction: column;
+border-style: solid;
+border-width: 1px;
+border-color: rgb(220,220,200);
+}

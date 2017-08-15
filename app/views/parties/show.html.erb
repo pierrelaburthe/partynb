@@ -1,7 +1,28 @@
-<h1><%=  @party.title %></h1>
-<h1><%=  @party.capacity %></h1>
-<h1><%=  @party.music_type %> </h1>
-<h1><%=  @party.user_id %></h1>
 
-<h1>Book now!</h1>
- <%= render 'bookings/form' %>
+  <div class="banner-party" style="background-image: linear-gradient(-225deg, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.3) 50%), url('https://static.pexels.com/photos/105933/pexels-photo-105933.jpeg'); height: 50vh; background-position: center;">
+    <h2 class="party-title"><%=  @party.title %></h2>
+
+  </div>
+  <div class="container-party">
+    <div class="header-party-details">
+      <div class="row">
+        <div class="col-xs-12 col-sm-6 col-sm-offset-1 container-details">
+          <div class="host-details"><%= image_tag "pierre.png", :class => "avatar"%>
+          <div class="avatar-text">
+          <h4><strong><%=  @party.title %></strong></h4>
+          <h5>by <strong> <%=  @party.user.name %> </strong></h5>
+
+           </div>
+          </div>
+          <div class="party-info">
+
+          <h5><strong><%=  @party.capacity %></strong> people wanted!</h5>
+          <h5>music type: <strong><%=  @party.music_type %> </strong></h5>
+          </div>
+        </div>
+    </div>
+    </div>
+  <div class="book"><h1>Book now!</h1>
+   <%= render 'bookings/form' %>
+  </div>
+</div>
