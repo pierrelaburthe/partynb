@@ -3,10 +3,19 @@
 .wrapper-white {
 background-color: white;
 display: flex;
-flex-direction: column;
+flex-direction: row;
 }
 .card-party {
 background-color: rgb(220,220, 220);
 border-style: solid;
 border-width: 1px;
+width: 700px;
+margin: 50px;
+position: absolute;
+
+h2{
+ position: relative;
+  top:10px;
+  left: 10px;
+}
 }
