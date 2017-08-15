@@ -1,9 +1,10 @@
-// Specific CSS for your home-page
-// Import page-specific CSS files here.
-
 .wrapper-parties {
 display: flex;
 flex-direction: row;
+}
+
+.wrapper-shared {
+  height: 100vh;
 }
 
 .card-party {
@@ -18,15 +19,16 @@ color: white;
 position: relative;
 }
 
-
 .card-description {
   position: absolute;
   bottom: 10px;
   left: 10px;
 }
+
 .card-description h2 {
   font-size: 24px;
 }
+
 .card-description p {
   font-size: 14px;
   font-weight: lighter;
@@ -38,17 +40,14 @@ position: relative;
 }
 
 .banner-content {
-
   text-align: center;
   margin-top: 0px;
-
   h1{
   padding-top: 100px;
   margin-top:0px;
   }
 }
-
-.banner {
+.banner-home {
   height:90vh;
   background-size: cover;
 }
