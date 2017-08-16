@@ -21,7 +21,18 @@ party2 = Party.new(title: "Barbeuc' dans le jardin", capacity: 5, music_type: "m
 party2.save!
 party3 = Party.new(title: "Murge chez Momo", capacity: 30, music_type: "grosse electro", price: 3, user: user3 )
 party3.save!
-
+party4 = Party.new(title: "Soirée d'anniversaire Julien 4 ans", capacity: 4, music_type: "henry dès", price: 9, user: user4 )
+party4.save!
+party5 = Party.new(title: "Soirée Wagon", capacity: 70, music_type: "deep house", price: 3, user: user1 )
+party5.save!
+party6 = Party.new(title: "Soirée déguisée", capacity: 9, music_type: "minimal", price: 3, user: user2 )
+party6.save!
+party7 = Party.new(title: "Baloon night", capacity: 12, music_type: "minimal", price: 3, user: user4 )
+party7.save!
+party8 = Party.new(title: "Theme bleu ", capacity: 8, music_type: "minimal", price: 3, user: user2 )
+party8.save!
+party9 = Party.new(title: "Degustation ", capacity: 3, music_type: "minimal", price: 3, user: user2 )
+party9.save!
 
 booking1 = Booking.new(user: user1, party: party2, participant_count: 4, status: "confirmed" )
 booking1.save!
