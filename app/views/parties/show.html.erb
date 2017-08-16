@@ -32,7 +32,7 @@
       <h3>Your demands</h3>
 
     <% elsif  @user_booking.blank? %>
-      <h1 class = "book" >Book now!</h1>
+      <h1 class = "book" id="bookmsg" >Book now!</h1>
       <%= render 'bookings/form' %>
 
     <% else %>
@@ -48,9 +48,10 @@
 
     <h1 class = "book" >Book now!</h1>
         <%= render 'bookings/form' %>
-
+<!--     <div class = "confirmation-msg">
+      <h2>Booking has not been made yet</h2>
+    </div> -->
   <% end %>
-
 
 </div>
 
