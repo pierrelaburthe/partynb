@@ -1,3 +1,11 @@
+puts 'destroying classes'
+classes = [User, Party, Booking]
+classes.each do |c|
+  c.destroy_all
+end
+
+puts 'creating new classes'
+
 # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
 #
