@@ -4,10 +4,12 @@ Rails.application.routes.draw do
   root to: 'pages#home'
 
   resources :parties do
-    resources :bookings
+    resources :bookings, except: [:destroy]
   end
 
-  resources :users, except: [:delete]
+  resources :bookings, only: [:destroy]
+
+  resources :users, except: [:destroy]
 
 end
 
