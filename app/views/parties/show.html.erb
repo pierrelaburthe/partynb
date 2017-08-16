@@ -3,7 +3,7 @@
     <h2 class="party-title"><%=  @party.title %></h2>
 
   </div>
-  
+
   <div class="container-party">
     <div class="header-party-details">
       <div class="row">
@@ -22,9 +22,9 @@
         </div>
     </div>
     </div>
-    
-    
-    
+
+
+
 <% if Booking.where(party_id: @party.id).where(user_id: current_user.id).nil?  %>
 
   <h1 class = "book" >Book now!</h1>
@@ -41,7 +41,34 @@
   <h3> Vous avez déjà fait une demande </h3>
   <h4> Annulez votre réservation </h4>
 <% end %>
-    
-   
+
+
 </div>
+
+
+
+<% content_for :after_js do %>
+<% javascript_tag do %>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    let coord = <%= raw @party_coordinates.to_json %>;
+      alert('Flat coordinates are' + coord.lat + ',' + coord.lng);
+  });
+
+<% end %>
+<% end %>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
