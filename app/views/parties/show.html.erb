@@ -25,21 +25,21 @@
 
   <% if user_signed_in? %>
 
-    <% if Booking.where(party_id: @party.id).where(user_id: current_user.id).nil?  %>
-
-      <h1 class = "book" >Book now!</h1>
-      <%= render 'bookings/form' %>
-
-    <% elsif @party.user_id == current_user.id %>
+    <% if @party.user_id == current_user.id %>
 
       <h1>Thank you for hosting this party!</h1>
       <h3>Your demands</h3>
 
+    <% elsif  @user_booking.blank? %>
+      <h1 class = "book" >Book now!</h1>
+      <%= render 'bookings/form' %>
 
     <% else %>
-
       <h3> Vous avez déjà fait une demande </h3>
-      <h4> Annulez votre réservation </h4>
+      <h4>
+      <%= link_to "Annulez votre réservation", booking_path(@user_booking.first), method: :delete %>
+
+      </h4>
     <% end %>
 
 

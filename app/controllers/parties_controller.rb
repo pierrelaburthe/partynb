@@ -16,6 +16,8 @@ before_action :set_party, only: [:show, :edit, :destroy]
 
   def show
     @booking = Booking.new
+    @user_booking = Booking.where(user: current_user, party: @party)
+    # raise
     @party_coordinates = { lat: @party.latitude, lng: @party.longitude }
   end
 
