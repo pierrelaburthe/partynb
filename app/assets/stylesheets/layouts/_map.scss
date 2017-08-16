@@ -1,0 +1,25 @@
+.main-container{
+  display: flex;
+}
+
+.map-container {
+  flex: 0 0 480px;
+  position: sticky;
+  top: 0;
+  position: relative;
+  overflow: hidden;
+}
+
+#map {
+  height: 100vh;
+}
+
+.result {
+  flex: 1;
+  margin: 0px;
+  padding: 2px;
+}
+
+.card-party {
+  margin: 30px
+}
