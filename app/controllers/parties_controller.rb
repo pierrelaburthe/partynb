@@ -6,7 +6,7 @@ before_action :set_party, only: [:show, :edit, :destroy]
 
   def index
     @parties = Party.all
-    @parties = Party.where.not(latitude: nil, longitude: nil)
+    # @parties = Party.where.not(latitude: nil, longitude: nil)
 
      @hash = Gmaps4rails.build_markers(@parties) do |party, marker|
       marker.lat party.latitude
