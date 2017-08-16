@@ -15,12 +15,13 @@ user4 = User.new(email: "blakimy@gmail.com", password: "blakimyyyy", name: "Yani
 user4.save!
 
 
-party1 = Party.new(title: "Pool party de ouf", capacity: 18, music_type: "justin bieber", price: 30, user: user1 )
+party1 = Party.new(title: "Pool party de ouf", capacity: 18, music_type: "justin bieber", price: 30, user: user1, address: "27 rue de Ménilmontant" )
 party1.save!
-party2 = Party.new(title: "Barbeuc' dans le jardin", capacity: 5, music_type: "musique francaise", price: 8, user: user2 )
+party2 = Party.new(title: "Barbeuc' dans le jardin", capacity: 5, music_type: "musique francaise", price: 8, user: user2, address: "32 Avenue de la République" )
 party2.save!
-party3 = Party.new(title: "Murge chez Momo", capacity: 30, music_type: "grosse electro", price: 3, user: user3 )
+party3 = Party.new(title: "Murge chez Momo", capacity: 30, music_type: "grosse electro", price: 3, user: user3, address: "57 Boulevard Magenta" )
 party3.save!
+
 
 
 booking1 = Booking.new(user: user1, party: party2, participant_count: 4, status: "confirmed" )

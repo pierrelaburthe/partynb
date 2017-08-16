@@ -20,6 +20,10 @@ align-items: center;
 margin: 20px;
 }
 
+.row {
+  padding-left:75px;
+}
+
 // .btn-danger {
 //   background-color: transparent;
 //   color: white;
@@ -85,8 +89,6 @@ margin: 20px;
   opacity:0.5;
     font-size: 14px;
   }
-
-
 
 .card-party-music {
     position: absolute;
