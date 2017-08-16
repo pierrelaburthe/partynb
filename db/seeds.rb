@@ -1,3 +1,11 @@
+puts 'destroying classes'
+classes = [User, Party, Booking]
+classes.each do |c|
+  c.destroy_all
+end
+
+puts 'creating new classes'
+
 # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
 #
@@ -15,11 +23,11 @@ user4 = User.new(email: "blakimy@gmail.com", password: "blakimyyyy", name: "Yani
 user4.save!
 
 
-party1 = Party.new(title: "Pool party de ouf", capacity: 18, music_type: "justin bieber", price: 30, user: user1 )
+party1 = Party.new(title: "Pool party de ouf", capacity: 18, music_type: "justin bieber", price: 30, user: user1, address: "27 rue de Ménilmontant" )
 party1.save!
-party2 = Party.new(title: "Barbeuc' dans le jardin", capacity: 5, music_type: "musique francaise", price: 8, user: user2 )
+party2 = Party.new(title: "Barbeuc' dans le jardin", capacity: 5, music_type: "musique francaise", price: 8, user: user2, address: "32 Avenue de la République" )
 party2.save!
-party3 = Party.new(title: "Murge chez Momo", capacity: 30, music_type: "grosse electro", price: 3, user: user3 )
+party3 = Party.new(title: "Murge chez Momo", capacity: 30, music_type: "grosse electro", price: 3, user: user3, address: "57 Boulevard Magenta" )
 party3.save!
 party4 = Party.new(title: "Soirée d'anniversaire Julien 4 ans", capacity: 4, music_type: "henry dès", price: 9, user: user4 )
 party4.save!
@@ -33,6 +41,7 @@ party8 = Party.new(title: "Theme bleu ", capacity: 8, music_type: "minimal", pri
 party8.save!
 party9 = Party.new(title: "Degustation ", capacity: 3, music_type: "minimal", price: 3, user: user2 )
 party9.save!
+
 
 booking1 = Booking.new(user: user1, party: party2, participant_count: 4, status: "confirmed" )
 booking1.save!
