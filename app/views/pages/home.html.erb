@@ -11,7 +11,7 @@
 
 
       <% @parties.last(3).each do |party| %>
-         <div class="card-party">
+         <div class="card-party card-margin-home" >
             <h2 class ="card-party-title"><%=  party.title %></h2>
             <h1 id= "capacity-number"> <%= party.capacity %></h1>
             <h5 class="capacity-spots"> spots remaining</h5>
