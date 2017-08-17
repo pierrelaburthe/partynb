@@ -18,6 +18,7 @@
 
           <h5><strong><%=  @party.capacity %></strong> people wanted!</h5>
           <h5>music type: <strong><%=  @party.music_type %> </strong></h5>
+          <h5><%= @party.address %></h5>
           </div>
         </div>
     </div>
@@ -28,17 +29,16 @@
     <% if @party.user_id == current_user.id %>
 
       <h1>Thank you for hosting this party!</h1>
-      <h3>Your demands</h3>
+      <%= link_to "Cancel this party", party_path(@party), method: :delete, data: { confirm: "Etes vous sûrs de vouloir annuler votre soirée?" } %>
 
     <% elsif  @user_booking.blank? %>
-      <h1 class = "book" >Book now!</h1>
+      <h1 class = "book" id="bookmsg" >Book now!</h1>
       <%= render 'bookings/form' %>
 
     <% else %>
       <h3> Vous avez déjà fait une demande </h3>
       <h4>
       <%= link_to "Annulez votre réservation", booking_path(@user_booking.first), method: :delete %>
-
       </h4>
     <% end %>
 
@@ -47,9 +47,7 @@
 
     <h1 class = "book" >Book now!</h1>
         <%= render 'bookings/form' %>
-
   <% end %>
-
 
 </div>
 

@@ -7,15 +7,17 @@
       <h1>Host a party!</h1>
 
       <%= simple_form_for @party do |f| %>
-      <%= f.input :title %>
-      <%= f.input :capacity %>
-      <%= f.input :music_type %>
-      <%= f.input :price %>
+      <%= f.input :title, placeholder: "Soirée chez Jean-Eudes" %>
+      <%= f.input :capacity, placeholder: "40" %>
+      <%= f.input :music_type, placeholder: "Chanson paillarde" %>
+      <%= f.input :price, placeholder: "10" %>
       <%= f.input :occurs_at %>
+      <%= f.input :address, placeholder: "43 rue du Temple" %>
       <%= f.submit class: "btn btn-success button-margin" %>
       <% end %>
 
     </div>
+
 
   </div>
 
