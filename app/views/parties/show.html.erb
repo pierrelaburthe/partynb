@@ -38,7 +38,7 @@
     <% else %>
       <h3> Vous avez déjà fait une demande </h3>
       <h4>
-      <%= link_to "Annulez votre réservation", booking_path(@user_booking.first), method: :delete %>
+      <%= link_to "Annulez votre réservation", booking_path(@user_booking.first), method: :delete, data: { confirm: "Etes vous sûrs de vouloir annuler votre réservation?" } %>
       </h4>
     <% end %>
 
