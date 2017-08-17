@@ -6,3 +6,8 @@
 //= require bootstrap-datepicker
 //= require underscore
 //= require gmaps/google
+
+
+$(document).ready(function(){
+$('input.datepicker').datepicker();
+});
