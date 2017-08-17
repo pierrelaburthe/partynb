@@ -28,6 +28,7 @@ end
 
 group :development, :test do
   gem 'capybara'
+  gem 'letter_opener'
   gem 'poltergeist'
   gem 'launchy'
   gem 'minitest-reporters'

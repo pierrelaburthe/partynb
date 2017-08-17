@@ -12,6 +12,7 @@ class UsersController < ApplicationController
   @user = User.new(user_params)
   if @user.save
     redirect user_path(@user)
+    UsertMailer.creation_confirmation(@user).deliver_now
   end
     render :new
  end

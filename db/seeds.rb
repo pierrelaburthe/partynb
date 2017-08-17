@@ -19,7 +19,7 @@ user2 = User.new(email: "donati@gmail.com", password: "donatiii", name: "Pierre 
 user2.save!
 user3 = User.new(email: "seror@gmail.com", password: "serorrrr", name: "Elliot Seror", age: 24)
 user3.save!
-user4 = User.new(email: "blakimy@gmail.com", password: "blakimyyyy", name: "Yanick Blackimy ", age: 25)
+user4 = User.new(email: "partynbmailtest@gmail.com", password: "blakimyyyy", name: "Yanick Blackimy ", age: 25)
 user4.save!
 
 
