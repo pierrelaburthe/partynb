@@ -24,6 +24,7 @@
     <ul>
       <h2 class=" dashboard-choice">Hosted parties</h2>
           <% @user.parties.each do |party| %>
+
             <li class="card-party">
               <h2 class ="card-party-title"><%= link_to party.title, party_path(party) %>
                 <%= link_to party_path(party), method: :delete, data: { confirm: "Êtes vous sûrs de vouloir annuler votre soirée?"} do %>
