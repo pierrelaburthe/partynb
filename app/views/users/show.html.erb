@@ -1,33 +1,34 @@
 <div class="dashboard-container">
 
-<div class="btn-group dasboard-choice dashboard-header" role="group">
-  <button type="button" class="btn btn-secondary dashboard-choice">Your bookings</button>
-  <button type="button" class="btn btn-secondary dashboard-choice">Hosted parties</button>
-</div>
+<!-- <div class="dashboard-header" role="group">
+  <h2 class=" dashboard-choice">Your bookings</h2>
+  <h2 class=" dashboard-choice">Hosted parties</h2>
+</div> -->
 
-  <div class="row">
-    <div class="col-xs-12 col-md-6 col-sm-6">
+  <div class="row ">
+    <div class="col-sm-5 col-sm-offset-2 col-md-4 col-md-offset-1 booking-side">
 <!--       <h1>Your bookings</h1>
  -->        <ul>
+   <h2 class=" dashboard-choice">Your bookings</h2>
           <% @bookings.each do |booking| %>
             <li class="card-party">
             <h2 class ="card-party-title"><%=  booking.party.title %></h2>
-            <h1 id= "capacity-number"> <%= booking.party.capacity %></h1>
-            <h5 class="capacity-spots"> spots remaining</h5>
+            <h1 id= "capacity-number"> 15/08</h1>
             <h5 class ="card-party-music">theme: <strong><%= booking.party.music_type %> </strong> </h5>
-
+<div class="avatar"></div>
             </li>
           <% end %>
         </ul>
     </div>
-    <div class="col-xs-12 col-md-4 col-sm-6"">
-<!--       <h1> Your hosted parties </h1>
- -->        <ul>
+    <div class=".col-sm-5 col-sm-offset-2 col-md-4 col-md-offset-1 hosting-side
+">
+
+      <ul>
+   <h2 class=" dashboard-choice">Hosted parties</h2>
           <% @user.parties.each do |party| %>
             <li class="card-party">
             <h2 class ="card-party-title"><%= party.title %></h2>
-            <h1 id= "capacity-number"> <%= party.capacity %></h1>
-            <h5 class="capacity-spots"> spots remaining</h5>
+            <h1 id= "capacity-number"> 22/10</h1>
             <h5 class ="card-party-music">theme: <strong><%= party.music_type %> </strong> </h5>
             </li>
           <% end %>
