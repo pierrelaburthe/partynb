@@ -1,4 +1,7 @@
 class Booking < ApplicationRecord
+
+  STATUS = ["Accepted","Declined"]
+
   belongs_to :user
   belongs_to :party
 

@@ -6,15 +6,14 @@
       <h2 class=" dashboard-choice">Your bookings</h2>
           <% @bookings.each do |booking| %>
             <li class="card-party">
-              <h2 class ="card-party-title"><%= link_to booking.party.title, party_path(booking.party)
-                 %>
-                <%= link_to booking_path(booking), method: :delete, data: {confirm: "Êtes-vous sûrs de vouloir annuler votre réservation?"} do %>
-                  <i class="fa fa-times"></i>
-                <% end %>
-              </h2>
-              <h1 id= "capacity-number"> 15/08</h1>
-              <h5 class ="card-party-music">theme: <strong><%= booking.party.music_type %>
-              </strong> </h5>
+
+            <h2 class ="card-party-title"><%= link_to booking.party.title, party_path(booking.party)
+               %></h2>
+            <h2>Statut: <%= booking.status %></h2>
+             <%= link_to "Annuler votre réservation", booking_path(booking), method: :delete, data: {confirm: "Êtes-vous sûrs de vouloir annuler votre réservation?"}  %>
+            <h1 id= "capacity-number"> 15/08</h1>
+            <h5 class ="card-party-music">theme: <strong><%= booking.party.music_type %> </strong> </h5>
+
               <div class="avatar"></div>
             </li>
           <% end %>
