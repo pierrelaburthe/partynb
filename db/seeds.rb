@@ -13,6 +13,9 @@ puts 'creating new classes'
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+
+
 user1 = User.new(email: "laburthe@gmail.com", password: "laburtheee", name: "Pierre Laburte", age: 23)
 user1.save!
 user2 = User.new(email: "donati@gmail.com", password: "donatiii", name: "Pierre Donati", age: 23)
@@ -23,23 +26,23 @@ user4 = User.new(email: "blakimy@gmail.com", password: "blakimyyyy", name: "Yani
 user4.save!
 
 
-party1 = Party.new(title: "Pool party de ouf", capacity: 18, music_type: "justin bieber", price: 30, user: user1, address: "27 rue de Ménilmontant")
+party1 = Party.new(title: "Pool party de ouf", capacity: 18, music_type: "justin bieber", price: 30, user: user1, address: "27 rue de Ménilmontant", remote_photo_url: "https://static.pexels.com/photos/7283/garden.jpg")
 party1.save!
-party2 = Party.new(title: "Barbeuc' dans le jardin", capacity: 5, music_type: "musique francaise", price: 8, user: user2, address: "32 Avenue de la République")
+party2 = Party.new(title: "Barbeuc' dans le jardin", capacity: 5, music_type: "musique francaise", price: 8, user: user2, address: "32 Avenue de la République", remote_photo_url: "https://static.pexels.com/photos/7283/garden.jpg")
 party2.save!
-party3 = Party.new(title: "Murge chez Momo", capacity: 30, music_type: "grosse electro", price: 3, user: user3, address: "57 Boulevard Magenta")
+party3 = Party.new(title: "Murge chez Momo", capacity: 30, music_type: "grosse electro", price: 3, user: user3, address: "57 Boulevard Magenta", remote_photo_url: "https://static.pexels.com/photos/7283/garden.jpg")
 party3.save!
-party4 = Party.new(title: "Soirée d'anniversaire Julien 4 ans", capacity: 4, music_type: "henry dès", price: 9, user: user4, address: "55 rue de varenne")
+party4 = Party.new(title: "Soirée d'anniversaire Julien 4 ans", capacity: 4, music_type: "henry dès", price: 9, user: user4, address: "55 rue de varenne", remote_photo_url: "https://static.pexels.com/photos/7283/garden.jpg")
 party4.save!
-party5 = Party.new(title: "Soirée Wagon", capacity: 70, music_type: "deep house", price: 3, user: user1, address: "44 rue coquillere ")
+party5 = Party.new(title: "Soirée Wagon", capacity: 70, music_type: "deep house", price: 3, user: user1, address: "44 rue coquillere ", remote_photo_url: "https://static.pexels.com/photos/7283/garden.jpg")
 party5.save!
-party6 = Party.new(title: "Soirée déguisée", capacity: 9, music_type: "minimal", price: 3, user: user2, address: "16 villa gaudelet")
+party6 = Party.new(title: "Soirée déguisée", capacity: 9, music_type: "minimal", price: 3, user: user2, address: "16 villa gaudelet", remote_photo_url: "https://static.pexels.com/photos/7283/garden.jpg")
 party6.save!
-party7 = Party.new(title: "Baloon night", capacity: 12, music_type: "minimal", price: 3, user: user4, address: "4 place victor hugo")
+party7 = Party.new(title: "Baloon night", capacity: 12, music_type: "minimal", price: 3, user: user4, address: "4 place victor hugo", remote_photo_url: "https://static.pexels.com/photos/7283/garden.jpg")
 party7.save!
-party8 = Party.new(title: "Theme bleu ", capacity: 8, music_type: "minimal", price: 3, user: user2, address: "30 boulevard raspail")
+party8 = Party.new(title: "Theme bleu ", capacity: 8, music_type: "minimal", price: 3, user: user2, address: "30 boulevard raspail", remote_photo_url: "https://static.pexels.com/photos/7283/garden.jpg")
 party8.save!
-party9 = Party.new(title: "Degustation ", capacity: 3, music_type: "minimal", price: 3, user: user2, address: "12 rue oberkampf")
+party9 = Party.new(title: "Degustation ", capacity: 3, music_type: "minimal", price: 3, user: user2, address: "12 rue oberkampf", remote_photo_url: "https://static.pexels.com/photos/7283/garden.jpg")
 party9.save!
 
 
