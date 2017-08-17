@@ -1,27 +1,40 @@
-<div class="container">
+<div class="dashboard-container">
+
+<div class="btn-group dasboard-choice dashboard-header" role="group">
+  <button type="button" class="btn btn-secondary dashboard-choice">Your bookings</button>
+  <button type="button" class="btn btn-secondary dashboard-choice">Hosted parties</button>
+</div>
+
   <div class="row">
-    <div class="col-xs-6">
-      <h1>Your bookings</h1>
-        <ul>
+    <div class="col-xs-12 col-md-6 col-sm-6">
+<!--       <h1>Your bookings</h1>
+ -->        <ul>
           <% @bookings.each do |booking| %>
-            <li>
-              <%= link_to booking.party.title, party_path(booking.party)
-               %>
-               <img src="../../assets/images/houseparty1.jpg" alt="">
+            <li class="card-party">
+            <h2 class ="card-party-title"><%=  booking.party.title %></h2>
+            <h1 id= "capacity-number"> <%= booking.party.capacity %></h1>
+            <h5 class="capacity-spots"> spots remaining</h5>
+            <h5 class ="card-party-music">theme: <strong><%= booking.party.music_type %> </strong> </h5>
+
             </li>
           <% end %>
         </ul>
     </div>
-    <div class="col-xs-6"">
-      <h1> Your hosted parties </h1>
-        <ul>
+    <div class="col-xs-12 col-md-4 col-sm-6"">
+<!--       <h1> Your hosted parties </h1>
+ -->        <ul>
           <% @user.parties.each do |party| %>
-            <li>
-              <%= link_to party.title, party_path(party) %>
+            <li class="card-party">
+            <h2 class ="card-party-title"><%= party.title %></h2>
+            <h1 id= "capacity-number"> <%= party.capacity %></h1>
+            <h5 class="capacity-spots"> spots remaining</h5>
+            <h5 class ="card-party-music">theme: <strong><%= party.music_type %> </strong> </h5>
             </li>
           <% end %>
       </ul>
     </div>
   </div>
+</div>
+
 </div>
 
