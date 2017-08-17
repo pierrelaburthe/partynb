@@ -1,6 +1,7 @@
 .wrapper-parties {
 display: flex;
 flex-direction: row;
+  margin-top: 150px;
 }
 
 .wrapper-shared {
@@ -37,9 +38,11 @@ position: relative;
   font-weight: lighter;
 }
 
-.message {
+
+.message-white {
   color: white;
   letter-spacing: 10px;
+
 }
 
 .banner-content {

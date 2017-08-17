@@ -21,6 +21,8 @@ gem "geocoder"
 
 gem "coffee-rails"
 gem "gmaps4rails"
+gem 'cloudinary'
+gem 'carrierwave', '~> 0.11.2'
 
 source 'https://rails-assets.org' do
   gem "rails-assets-underscore"
@@ -33,6 +35,7 @@ end
 
 group :development, :test do
   gem 'capybara'
+  gem 'letter_opener'
   gem 'poltergeist'
   gem 'launchy'
   gem 'minitest-reporters'

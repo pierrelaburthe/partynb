@@ -1,10 +1,12 @@
 
-.container-party{
+.container-party, .wrapper-parties{
   display: flex;
   flex-direction: row;
 }
 
-
+.banner-content{
+  height:100vh;
+}
 .just-booked{
   background-color: red;
 }

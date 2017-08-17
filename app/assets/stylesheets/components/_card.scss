@@ -1,46 +1,50 @@
 .card-party {
 border-style: solid;
-width: 100%;
 border-radius: 4px;
 height: 30vh;
 color: white;
-padding: 8px;
+padding: 0px;
+margin:5px;
 text-align:center;
-margin: auto;
 font-size: 20px;
 background-size: cover;
 display: flex;
 flex-direction: column;
+width:100%;
 align-items: center;
-margin: 20px;
 text-decoration: none;
 list-style-type: none;
 position: relative;
-.avatar{
-    position: absolute;
-    top: 10px;
-    right: 10px;
-}
-&:hover {
-  // height: 31vh;
-}
+border-color: white;
+    background-color: rgba(255,255,255,0.3);
+border-width:1px;
+  border-bottom: 0 none;
+  box-shadow: 0 1px 5px white;
+  &:hover {
+  background-color: #18587A
+;
+  }
 }
 
 .card-party-title {
+      a{
+        color: rgba(255,255,255,0.6);
+        text-decoration:none;
+       }
+
     position: absolute;
-    top: 10px;
-    left: 10px;
+    font-weight: bolder;
+    top: 5px;
+    left: 5px;
     margin-top: 0px;
-    font-size: 18px;
+    font-size: 20px;
 }
 
-.card-description {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  h2 {
-  font-size: 24px;
-  }
+.fa-times {
+  padding-left:10px;
+  margin-top: 0px;
+  padding-top: 0px;
+  font-size: 30px;
 }
 
     #capacity-number{
@@ -54,11 +58,8 @@ position: relative;
       border-style: solid;
       border-width: 1px;
       border-radius: 50%;
-    // font-size: 10px;
     font-size: 30px;
-    &:hover{
-      color:white;
-    }
+
     }
 
 .capacity-spots{
@@ -73,7 +74,8 @@ position: relative;
     bottom: 10px;
     left: 10px;
     margin-top: 0px;
-    font-size: 14px;
+    color: rgba(255,255,255,0.7);
+font-size: 20px;
 }
 
 .card-link {
