@@ -9,6 +9,7 @@
   align-items: center;
   justify-content: space-between;
   color: white;
+  position: relative;
 }
 
 /* Logo */
@@ -21,6 +22,10 @@
   height: 35px;
   width: 35px;
   border-radius: 50%;
+  position: absolute;
+    top: -16px;
+    left: 3px;
+
 }
 
 /* Right section */
