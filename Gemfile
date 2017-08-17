@@ -26,6 +26,11 @@ source 'https://rails-assets.org' do
   gem "rails-assets-underscore"
 end
 
+source "https://rails-assets.org" do
+  gem 'rails-assets-bootstrap-datepicker'
+end
+
+
 group :development, :test do
   gem 'capybara'
   gem 'poltergeist'
