@@ -3,7 +3,7 @@ class UsersController < ApplicationController
  # skip_before_action :authenticate_user!, only: :show
 
  before_action :set_users, only: [:show, :edit]
- after_create :host_mail_confirmation
+ # after_create :host_mail_confirmation
 
  def new
     @user = User.new
