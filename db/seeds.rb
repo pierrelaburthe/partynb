@@ -23,29 +23,29 @@ user4 = User.new(email: "partynbmailtest@gmail.com", password: "blakimyyyy", nam
 user4.save!
 
 
-party1 = Party.new(title: "Pool party de ouf", capacity: 18, music_type: "justin bieber", price: 30, user: user1, address: "27 rue de Ménilmontant" )
+party1 = Party.new(title: "Pool party de ouf", capacity: 18, music_type: "justin bieber", price: 30, user: user1, address: "27 rue de Ménilmontant")
 party1.save!
-party2 = Party.new(title: "Barbeuc' dans le jardin", capacity: 5, music_type: "musique francaise", price: 8, user: user2, address: "32 Avenue de la République" )
+party2 = Party.new(title: "Barbeuc' dans le jardin", capacity: 5, music_type: "musique francaise", price: 8, user: user2, address: "32 Avenue de la République")
 party2.save!
-party3 = Party.new(title: "Murge chez Momo", capacity: 30, music_type: "grosse electro", price: 3, user: user3, address: "57 Boulevard Magenta" )
+party3 = Party.new(title: "Murge chez Momo", capacity: 30, music_type: "grosse electro", price: 3, user: user3, address: "57 Boulevard Magenta")
 party3.save!
-party4 = Party.new(title: "Soirée d'anniversaire Julien 4 ans", capacity: 4, music_type: "henry dès", price: 9, user: user4, address: "55 rue de varenne "  )
+party4 = Party.new(title: "Soirée d'anniversaire Julien 4 ans", capacity: 4, music_type: "henry dès", price: 9, user: user4, address: "55 rue de varenne")
 party4.save!
-party5 = Party.new(title: "Soirée Wagon", capacity: 70, music_type: "deep house", price: 3, user: user1, address: "44 rue coquillere "  )
+party5 = Party.new(title: "Soirée Wagon", capacity: 70, music_type: "deep house", price: 3, user: user1, address: "44 rue coquillere ")
 party5.save!
-party6 = Party.new(title: "Soirée déguisée", capacity: 9, music_type: "minimal", price: 3, user: user2, address: "16 villa gaudelet"  )
+party6 = Party.new(title: "Soirée déguisée", capacity: 9, music_type: "minimal", price: 3, user: user2, address: "16 villa gaudelet")
 party6.save!
-party7 = Party.new(title: "Baloon night", capacity: 12, music_type: "minimal", price: 3, user: user4, address: "4 place victor hugo"   )
+party7 = Party.new(title: "Baloon night", capacity: 12, music_type: "minimal", price: 3, user: user4, address: "4 place victor hugo")
 party7.save!
-party8 = Party.new(title: "Theme bleu ", capacity: 8, music_type: "minimal", price: 3, user: user2, address: "30 boulevard raspail" )
+party8 = Party.new(title: "Theme bleu ", capacity: 8, music_type: "minimal", price: 3, user: user2, address: "30 boulevard raspail")
 party8.save!
-party9 = Party.new(title: "Degustation ", capacity: 3, music_type: "minimal", price: 3, user: user2, address: "12 rue oberkampf"  )
+party9 = Party.new(title: "Degustation ", capacity: 3, music_type: "minimal", price: 3, user: user2, address: "12 rue oberkampf")
 party9.save!
 
 
-booking1 = Booking.new(user: user1, party: party2, participant_count: 4, status: "confirmed" )
+booking1 = Booking.new(user: user1, party: party2, participant_count: 4, status: "confirmed", message: "On est cools")
 booking1.save!
-booking2 = Booking.new(user: user2, party: party1, participant_count: 3, status: "pending" )
+booking2 = Booking.new(user: user2, party: party1, participant_count: 3, status: "pending", message: "On ramène à boire")
 booking2.save!
-booking3 = Booking.new(user: user3, party: party3, participant_count: 31, status: "pending" )
+booking3 = Booking.new(user: user3, party: party3, participant_count: 31, status: "pending", message: "3 bouteillles de hard")
 booking3.save!
