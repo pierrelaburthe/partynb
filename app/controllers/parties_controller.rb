@@ -18,6 +18,11 @@ before_action :set_party, only: [:show, :edit, :destroy]
     @booking = Booking.new
     @user_booking = Booking.where(user: current_user, party: @party)
     @party_coordinates = { lat: @party.latitude, lng: @party.longitude }
+
+    @hash = Gmaps4rails.build_markers(@parties) do |party, marker|
+      marker.lat party.latitude
+      marker.lng party.longitude
+    end
   end
 
   def new
