@@ -1,43 +1,41 @@
 <div class="main-container">
-
-  <div class="result">
-
+  <div class="result container">
     <div class="row">
-      <% array = ["https://static.pexels.com/photos/105933/pexels-photo-105933.jpeg",
-        "https://static.pexels.com/photos/7283/garden.jpg",
-        "https://static.pexels.com/photos/225228/pexels-photo-225228.jpeg",
-        "https://static.pexels.com/photos/306070/pexels-photo-306070.jpeg",
-        "https://static.pexels.com/photos/341858/pexels-photo-341858.jpeg",
-        "https://static.pexels.com/photos/160420/photo-booth-wedding-party-girls-160420.jpeg",
-        "https://static.pexels.com/photos/225025/pexels-photo-225025.jpeg",
-        "https://static.pexels.com/photos/125545/pexels-photo-125545.jpeg",
-        "https://static.pexels.com/photos/207116/pexels-photo-207116.jpeg"] %>
-      <% i=0 %>
+      <!-- <div class="col-xs-8"> -->
+        <% array = ["https://static.pexels.com/photos/105933/pexels-photo-105933.jpeg",
+          "https://static.pexels.com/photos/7283/garden.jpg",
+          "https://static.pexels.com/photos/225228/pexels-photo-225228.jpeg",
+          "https://static.pexels.com/photos/306070/pexels-photo-306070.jpeg",
+          "https://static.pexels.com/photos/341858/pexels-photo-341858.jpeg",
+          "https://static.pexels.com/photos/160420/photo-booth-wedding-party-girls-160420.jpeg",
+          "https://static.pexels.com/photos/225025/pexels-photo-225025.jpeg",
+          "https://static.pexels.com/photos/125545/pexels-photo-125545.jpeg",
+          "https://static.pexels.com/photos/207116/pexels-photo-207116.jpeg"] %>
+        <% i=0 %>
 
-      <% @parties.each do |party| %>
+        <% @parties.each do |party| %>
 
-        <div class="col-md-5">
-          <div class="card-party" style="background-image: linear-gradient(-225deg, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.3) 50%),url(<%=array.sample%>)">
+          <div class="col-xs-4">
+            <div class="card-party" style="background-image: linear-gradient(-225deg, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.3) 50%),url(<%=array.sample%>)">
 
-            <h2 class ="card-party-title"><%=  party.title %></h2>
-            <h1 id= "capacity-number"> <%= party.capacity %></h1>
-            <h5 class="capacity-spots"> spots remaining</h5>
-            <h5 class ="card-party-music">theme: <strong><%= party.music_type %> </strong> </h5>
-            <%= link_to '', party_path(party), class: "card-link" %>
+              <h2 class ="card-party-title"><%=  party.title %></h2>
+              <h1 id= "capacity-number"> <%= party.capacity %></h1>
+              <h5 class="capacity-spots"> spots remaining</h5>
+              <h5 class ="card-party-music">theme: <strong><%= party.music_type %> </strong> </h5>
+              <%= link_to '', party_path(party), class: "card-link" %>
+            </div>
           </div>
-        </div>
-        <% i+=1 %>
-      <% end %>
-
+          <% i+=1 %>
+        <% end %>
     </div>
-
   </div>
+  <div id="map"></div>
 
-  <div class="map-container">
+</div>
 
-    <div id="map"></div>
 
-    <% content_for(:after_js) do %>
+
+<% content_for(:after_js) do %>
       <script>
         document.addEventListener("DOMContentLoaded", () => {
           var handler = Gmaps.build('Google');
@@ -54,10 +52,3 @@
         });
       </script>
     <% end %>
-
-  </div>
-
-</div>
-
-
-
