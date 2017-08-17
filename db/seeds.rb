@@ -19,8 +19,10 @@ user2 = User.new(email: "donati@gmail.com", password: "donatiii", name: "Pierre 
 user2.save!
 user3 = User.new(email: "seror@gmail.com", password: "serorrrr", name: "Elliot Seror", age: 24)
 user3.save!
-user4 = User.new(email: "blakimy@gmail.com", password: "blakimyyyy", name: "Yanick Blackimy ", age: 25)
+user4 = User.new(email: "yannickblakime@gmail.com", password: "blakimyyyy", name: "Yanick Blackimy ", age: 25)
 user4.save!
+user5 = User.new(email: "partynbmailtest@gmail.com", password: "partynbppey", name: "partynb", age: 25)
+user5 .save!
 
 
 party1 = Party.new(title: "Pool party de ouf", capacity: 18, music_type: "justin bieber", price: 30, user: user1, address: "27 rue de Ménilmontant")
@@ -41,6 +43,7 @@ party8 = Party.new(title: "Theme bleu ", capacity: 8, music_type: "minimal", pri
 party8.save!
 party9 = Party.new(title: "Degustation ", capacity: 3, music_type: "minimal", price: 3, user: user2, address: "12 rue oberkampf")
 party9.save!
+
 
 
 booking1 = Booking.new(user: user1, party: party2, participant_count: 4, status: "confirmed", message: "On est cools")
