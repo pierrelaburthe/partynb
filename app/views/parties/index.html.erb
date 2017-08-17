@@ -11,6 +11,8 @@
               <h1 id= "capacity-number"> <%= party.capacity %></h1>
               <h5 class="capacity-spots"> spots remaining</h5>
               <h5 class ="card-party-music">theme: <strong><%= party.music_type %> </strong> </h5>
+                            <%= link_to "", party_path(party), class: "card-link" %>
+
             </div>
           </div>
         <% end %>
