@@ -1,5 +1,5 @@
 // // Import page-specific CSS files here.
-// @import "home";
+@import "home";
 
 // .card-party {
 // border-style: solid;
@@ -18,21 +18,21 @@
 // margin: 20px;
 // }
 
-.card-party {
-border-style: solid;
-width: 100%;
-border-radius: 4px;
-height: 30vh;
-color: white;
-padding: 8px;
-text-align:center;
-margin: auto;
-font-size: 20px;
-background-size: cover;
-display: flex;
-flex-direction: column;
-align-items: center;
-}
+// .card-party {
+// border-style: solid;
+// width: 100%;
+// border-radius: 4px;
+// height: 30vh;
+// color: white;
+// padding: 8px;
+// text-align:center;
+// margin: auto;
+// font-size: 20px;
+// background-size: cover;
+// display: flex;
+// flex-direction: column;
+// align-items: center;
+// }
 
 .card-margin-home{
   margin: 20px;

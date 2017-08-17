@@ -1,6 +1,7 @@
 .wrapper-parties {
 display: flex;
 flex-direction: row;
+  margin-top: 150px;
 }
 
 .wrapper-shared {
@@ -9,6 +10,7 @@ flex-direction: row;
 
 .card-party {
 background-color: rgba(255,255,255, 0.3);
+background-size: cover;
 border-style: solid;
 border-width: 1px;
 width: 500px;
@@ -18,6 +20,8 @@ height: 175px;
 color: white;
 position: relative;
 }
+
+
 
 .card-description {
   position: absolute;
@@ -34,9 +38,11 @@ position: relative;
   font-weight: lighter;
 }
 
-.message {
+
+.message-white {
   color: white;
   letter-spacing: 10px;
+
 }
 
 .banner-content {
@@ -52,3 +58,19 @@ position: relative;
   background-size: cover;
 }
 
+.party-padded{
+  padding-right: 50px;
+}
+// .card-link {
+//   position: absolute;
+//   top: 0;
+//   bottom: 0;
+//   right: 0;
+//   width: 100%;
+//   z-index: 2;
+//   background: black;
+//   opacity: 0;
+// }
+// .card-link:hover {
+//   opacity: 0.1;
+// }
