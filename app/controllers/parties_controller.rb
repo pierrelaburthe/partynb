@@ -58,7 +58,7 @@ before_action :set_party, only: [:show, :edit, :destroy]
   end
 
   def party_params
-    params.require(:party).permit(:title, :capacity, :music_type, :price, :occurs_at, :address)
+    params.require(:party).permit(:title, :capacity, :music_type, :price, :occurs_at, :address, :photo_cache, :photo)
   end
 
 end
