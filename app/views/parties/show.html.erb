@@ -38,12 +38,15 @@
       <% @party.bookings.each do |booking| %>
         <li>
           <%= booking.user.name %> - <%= booking.message %>
-
-           <%= simple_form_for [@party, @booking] do |f| %>
-            <%= f.input :status, label: "Choisissez-vous de:", collection Booking::STATUS %>
-            <%= f.submit "Confirmer", class: "btn btn-primary" %>
+          <%= simple_form_for [@party, @booking] do |f| %>
+            <%= f.input :status, as: :hidden, value: "accepted" %>
+            <%= f.submit "Accepter", class: "btn btn-success" %>
           <% end %>
 
+          <%= simple_form_for [@party, @booking] do |f| %>
+            <%= f.input :status, as: :hidden, value: "declined" %>
+            <%= f.submit "Refuser", class: "btn btn-danger" %>
+          <% end %>
         </li>
       <% end %>
     </ul>
@@ -75,17 +78,37 @@
 
 </div>
 
+ <div id="map"></div>
+
+<% content_for(:after_js) do %>
+      <script>
+        document.addEventListener("DOMContentLoaded", () => {
+          var handler = Gmaps.build('Google');
+          handler.buildMap({ internal: { id: 'map' } }, function() {
+          markers = handler.addMarkers(<%= raw @hash.to_json %>);
+          handler.bounds.extendWith(markers);
+          handler.fitMapToBounds();
+          if (markers.length == 0) {
+            handler.getMap().setZoom(2);
+          } else if (markers.length == 1) {
+            handler.getMap().setZoom(14);
+          }
+          });
+        });
+      </script>
+    <% end %>
+
 
 
 <% content_for :after_js do %>
-<% javascript_tag do %>
-<script>
-  document.addEventListener("DOMContentLoaded", () => {
-    let coord = <%= raw @party_coordinates.to_json %>;
-      alert('Flat coordinates are' + coord.lat + ',' + coord.lng);
-  });
+  <% javascript_tag do %>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      let coord = <%= raw @party_coordinates.to_json %>;
+        alert('Flat coordinates are' + coord.lat + ',' + coord.lng);
+    });
 
-<% end %>
+  <% end %>
 <% end %>
 
 
