@@ -55,7 +55,7 @@ before_action :set_booking, only: [:show, :edit, :destroy]
   end
 
   def booking_params
-    params.require(:booking).permit(:user_id, :party_id, :participant_count, :status)
+    params.require(:booking).permit(:user_id, :party_id, :participant_count, :status, :message)
   end
 
 end
