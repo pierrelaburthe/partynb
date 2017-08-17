@@ -11,6 +11,13 @@
  -->        <ul>
    <h2 class=" dashboard-choice">Your bookings</h2>
           <% @bookings.each do |booking| %>
+<<<<<<< HEAD
+            <li class="card-party">
+            <h2 class ="card-party-title"><%=  booking.party.title %></h2>
+            <h1 id= "capacity-number"> 15/08</h1>
+            <h5 class ="card-party-music">theme: <strong><%= booking.party.music_type %> </strong> </h5>
+<div class="avatar"></div>
+=======
 
               
             <li class="card-party">
@@ -20,6 +27,7 @@
             <h1 id= "capacity-number"> 15/08</h1>
             <h5 class ="card-party-music">theme: <strong><%= booking.party.music_type %> </strong> </h5>
               <div class="avatar"></div>
+>>>>>>> master
             </li>
           <% end %>
         </ul>
@@ -30,6 +38,12 @@
       <ul>
    <h2 class=" dashboard-choice">Hosted parties</h2>
           <% @user.parties.each do |party| %>
+<<<<<<< HEAD
+            <li class="card-party">
+            <h2 class ="card-party-title"><%= party.title %></h2>
+            <h1 id= "capacity-number"> 22/10</h1>
+            <h5 class ="card-party-music">theme: <strong><%= party.music_type %> </strong> </h5>
+=======
 
  
               
@@ -39,6 +53,7 @@
             <h1 id= "capacity-number"> 22/10</h1>
             <h5 class ="card-party-music">theme: <strong><%= party.music_type %> </strong> </h5>
 
+>>>>>>> master
             </li>
           <% end %>
       </ul>

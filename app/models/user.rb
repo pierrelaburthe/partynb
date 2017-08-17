@@ -36,7 +36,11 @@ class User < ApplicationRecord
     return user
   end
 
+  private
 
+  def host_mail_confirmation
+    UserMailer.host_mail_confirmation(self).deliver_now
+  end
 
 end
 

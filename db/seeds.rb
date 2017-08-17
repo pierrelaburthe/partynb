@@ -22,9 +22,10 @@ user2 = User.new(email: "donati@gmail.com", password: "donatiii", name: "Pierre 
 user2.save!
 user3 = User.new(email: "seror@gmail.com", password: "serorrrr", name: "Elliot Seror", age: 24)
 user3.save!
-user4 = User.new(email: "blakimy@gmail.com", password: "blakimyyyy", name: "Yanick Blackimy ", age: 25)
+user4 = User.new(email: "yannickblakime@gmail.com", password: "blakimyyyy", name: "Yanick Blackime ", age: 25)
 user4.save!
-
+user5 = User.new(email: "partynbmailtest@gmail.com", password: "partynbppey", name: "partynb", age: 25)
+user5.save!
 
 party1 = Party.new(title: "Pool party de ouf", capacity: 18, music_type: "justin bieber", price: 30, user: user1, address: "27 rue de Ménilmontant", remote_photo_url: "https://static.pexels.com/photos/7283/garden.jpg")
 party1.save!
