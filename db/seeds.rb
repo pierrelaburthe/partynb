@@ -43,9 +43,9 @@ party9 = Party.new(title: "Degustation ", capacity: 3, music_type: "minimal", pr
 party9.save!
 
 
-booking1 = Booking.new(user: user1, party: party2, participant_count: 4, status: "confirmed" )
+booking1 = Booking.new(user: user1, party: party2, participant_count: 4, status: "confirmed", message: "On est cools")
 booking1.save!
-booking2 = Booking.new(user: user2, party: party1, participant_count: 3, status: "pending" )
+booking2 = Booking.new(user: user2, party: party1, participant_count: 3, status: "pending", message: "On ramène à boire")
 booking2.save!
-booking3 = Booking.new(user: user3, party: party3, participant_count: 31, status: "pending" )
+booking3 = Booking.new(user: user3, party: party3, participant_count: 31, status: "pending", message: "3 bouteillles de hard")
 booking3.save!

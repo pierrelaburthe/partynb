@@ -29,7 +29,7 @@
     <% if @party.user_id == current_user.id %>
 
       <h1>Thank you for hosting this party!</h1>
-      <h3>Your demands</h3>
+      <%= link_to "Cancel this party", party_path(@party), method: :delete, data: { confirm: "Etes vous sûrs de vouloir annuler votre soirée?" } %>
 
     <% elsif  @user_booking.blank? %>
       <h1 class = "book" id="bookmsg" >Book now!</h1>
@@ -47,9 +47,6 @@
 
     <h1 class = "book" >Book now!</h1>
         <%= render 'bookings/form' %>
-<!--     <div class = "confirmation-msg">
-      <h2>Booking has not been made yet</h2>
-    </div> -->
   <% end %>
 
 </div>
