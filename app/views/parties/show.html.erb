@@ -31,29 +31,31 @@
       <h1>Thank you for hosting this party!</h1>
       <%= link_to "Cancel this party", party_path(@party), method: :delete, data: { confirm: "Etes vous sûrs de vouloir annuler votre soirée?" } %>
 
+      <% if @party.bookings.blank? %>
+      <h4>You have no demand for your party yet</h4>
 
-      <h3>Demands for your party</h3>
+      <% else %>
 
-    <ul>
-      <% @party.bookings.each do |booking| %>
-        <li>
-          <%= booking.user.name %> - <%= booking.message %>
-          <%= simple_form_for [@party, @booking] do |f| %>
-            <%= f.input :status, as: :hidden, value: "accepted" %>
-            <%= f.submit "Accepter", class: "btn btn-success" %>
-          <% end %>
+        <h3>Demands for your party</h3>
 
-          <%= simple_form_for [@party, @booking] do |f| %>
-            <%= f.input :status, as: :hidden, value: "declined" %>
-            <%= f.submit "Refuser", class: "btn btn-danger" %>
-          <% end %>
-        </li>
+      <ul>
+        <% @party.bookings.each do |booking| %>
+          <li>
+            <%= booking.user.name %> - <%= booking.message %>
+            <%= simple_form_for [@party, @booking] do |f| %>
+              <%= f.input :status, as: :hidden, value: "accepted" %>
+              <%= f.submit "Accepter", class: "btn btn-success" %>
+            <% end %>
+
+            <%= simple_form_for [@party, @booking] do |f| %>
+              <%= f.input :status, as: :hidden, value: "declined" %>
+              <%= f.submit "Refuser", class: "btn btn-danger" %>
+            <% end %>
+          </li>
+        <% end %>
+      </ul>
+
       <% end %>
-    </ul>
-
-
-
-
 
 
     <% elsif  @user_booking.blank? %>

@@ -5,6 +5,8 @@ class User < ApplicationRecord
   has_many :parties, dependent: :destroy
   has_many :bookings, dependent: :destroy
 
+  mount_uploader :photo, PhotoUploader
+
   validates :email, presence: true
   # validates :name, presence: true
   validates :password, presence: true
