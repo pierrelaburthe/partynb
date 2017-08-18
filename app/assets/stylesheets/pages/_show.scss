@@ -1,26 +1,118 @@
 
-.container-party, .wrapper-parties{
+.container-party, .wrapper-parties, .show-card-header{
   display: flex;
   flex-direction: row;
 }
 
-.banner-content{
-  height:100vh;
+.avatar-group {
+  display: flex;
+    flex-direction: column;
+    position: absolute;
+    top:0px;
+    right:5px;
 }
+
+.host-choice {
+ display: flex;
+ flex-direction: row;
+ margin-left:20px;
+ padding: 0px 20px;
+}
+.demand-box {
+  background-color: white;
+  padding:15px;
+    display: flex;
+    flex-direction: column;
+box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.1);
+     box-shadow: 0px 1px 5px rgba(0,0,0,0.1);
+.btn-choice{
+margin-left:10px;
+}
+    h3{
+margin-top:10px;
+    }
+
+    li{
+      list-style-type: none;
+      align-items:center;
+    }
+}
+
+.host-message {
+  position:relative;
+  top : 20px;
+    margin-bottom: 244px;
+}
+.show-card{
+height: 25vh;
+position: relative;
+
+}
+
+.show-card-title{
+padding-left:10px;
+}
+
+.show-card-body {
+  color: rgb(100,100,100);
+  display: flex;
+  flex-direction: row;
+  h5{
+padding: 10px;
+  }
+  position: absolute;
+  font-weight:100;
+  margin-bottom: 10px;
+}
+
+.fa-map-marker, .fa-music, .fa-users {
+padding-left:20px;
+}
+
 .just-booked{
   background-color: red;
 }
-.avatar {
+.show-avatar {
   height: 70px;
   width: 70px;
   border-radius: 50%;
-  margin-top:15px;
+  margin-top:5px;
+  padding-right:0px;
+
 }
 
-master
+.avatar-name{
+color: rgb(100,100,100);
+font-size:12px;
+}
 .avatar-text{
   margin-left:30px;
 }
+
+.container-party {
+    height:40vh;
+    justify-content: space-around;
+    // padding-right:200px;
+  .new-booking{
+border-style: solid;
+border-width:1px;
+
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .banner-party{
   height: 50vh;
   background-position:center;
@@ -38,19 +130,17 @@ margin-top:0px;
 align-items: center;
 }
 
-.host-details {
-  // width: 200px;
-  display: flex;
-    flex-direction: row;
+.avatar {
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;
+  margin-top:15px;
 }
 
-.party-info {
-  display: flex;
 
-  flex-direction: row;
-  h5{
-padding: 10px;
-  }
+
+.banner-content{
+  height:100vh;
 }
 
 .container-details{
@@ -62,4 +152,5 @@ padding: 10px;
 border-style: solid;
 border-width: 1px;
 border-color: rgb(220,220,200);
+padding:0px;
 }
