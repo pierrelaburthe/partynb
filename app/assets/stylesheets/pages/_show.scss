@@ -1,7 +1,9 @@
+
 .container-party, .wrapper-parties, .show-card-header{
   display: flex;
   flex-direction: row;
 }
+
 .avatar-group {
   display: flex;
     flex-direction: column;
@@ -9,6 +11,7 @@
     top:0px;
     right:5px;
 }
+
 .host-choice {
  display: flex;
  flex-direction: row;
@@ -16,32 +19,52 @@
  padding: 0px 20px;
 }
 .demand-box {
+  text-align:center;
   background-color: white;
-  padding:15px;
+  padding:5px;
     display: flex;
     flex-direction: column;
 box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.1);
      box-shadow: 0px 1px 5px rgba(0,0,0,0.1);
 .btn-choice{
-margin-left:10px;
+    margin-right: 5px;
 }
     h3{
 margin-top:10px;
     }
+
     li{
       list-style-type: none;
       align-items:center;
     }
+
+    ul{
+      padding-left: 0px;
+    }
 }
+#red-message {
+  color: #BF0044;
+}
+
+#blue-message {
+  color: #6D42C7;
+}
+
 .host-message {
   position:relative;
-  top : 20px;
-    margin-bottom: 244px;
+    top: -119px;
+    left: -339px;
+
+font-size:20px;
+ color: rgb(100,100,100);
+
 }
 .show-card{
 height: 25vh;
 position: relative;
+
 }
+
 .show-card-title{
 padding-left:10px;
 }
@@ -59,6 +82,23 @@ padding: 10px;
 .fa-map-marker, .fa-music, .fa-users {
 padding-left:20px;
 }
+
+.show-card-body {
+  color: rgb(100,100,100);
+  display: flex;
+  flex-direction: row;
+  h5{
+padding: 10px;
+  }
+  position: absolute;
+  font-weight:100;
+  margin-bottom: 10px;
+}
+
+.fa-map-marker, .fa-music, .fa-users {
+padding-left:20px;
+}
+
 .just-booked{
   background-color: red;
 }
@@ -70,21 +110,28 @@ padding-left:20px;
   padding-right:0px;
 }
 .avatar-name{
-color: rgb(100,100,100);
-font-size:12px;
+  color: rgb(100,100,100);
+  font-size:12px;
 }
 .avatar-text{
   margin-left:30px;
 }
+
 .container-party {
     height:40vh;
     justify-content: space-around;
-    // padding-right:200px;
+    padding-right:150px;
+    margin-right:100px;
   .new-booking{
 border-style: solid;
 border-width:1px;
   }
+  .fa-times{
+          color: #BF0044;
+          font-size:50px;
+  }
 }
+
 .banner-party{
   height: 50vh;
   background-position:center;
@@ -100,16 +147,19 @@ margin-top:0px;
     justify-content: space-around;
 align-items: center;
 }
+
 .avatar {
   height: 70px;
   width: 70px;
   border-radius: 50%;
   margin-top:15px;
 }
+
 .banner-content{
   height:100vh;
 }
 .container-details{
+  margin-left:200px;
   background-color: white;
       box-shadow: 0px 1px 5px rgba(0,0,0,0.1);
   width: 400px;

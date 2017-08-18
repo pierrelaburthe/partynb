@@ -12,7 +12,9 @@
       <div class="show-card-header">
         <h3 class="show-card-title"><strong><%=  @party.title %></strong></h3>
           <div class="avatar-group">
+
           <%= image_tag @party.user.photo, :class => "show-avatar" %>
+
           <h6 class = "avatar-name"><strong> <%=  @party.user.name %> </strong></h6>
           </div>
        </div>
@@ -30,16 +32,22 @@ music type: <strong><%=  @party.music_type %> </strong></h5>
     </div>
   <% if user_signed_in? %>
     <% if @party.user_id == current_user.id %>
-      <h6 class = "host-message">Thank you for hosting this party!</h6>
+
+      <h6 class = "host-message" id ="blue-message">Thank you for hosting this party!</h6>
 
                     <%= link_to party_path(@party), method: :delete, data: { confirm: "Êtes vous sûrs de vouloir annuler votre soirée?"} do %>
                 <i class="fa fa-times"></i>
               <% end %>
+
+
+
+
       <% if @party.bookings.blank? %>
       <h4>You have no demand for your party yet</h4>
       <% else %>
+
 <div class="demand-box">
-        <h3>Demands for your party</h3>
+        <h3>Requests</h3>
       <ul>
         <% @party.bookings.each do |booking| %>
           <li >
@@ -47,25 +55,33 @@ music type: <strong><%=  @party.music_type %> </strong></h5>
             <div class = "host-choice">
             <%= simple_form_for [@party, booking] do |f| %>
               <%= f.input :status, as: :hidden, value: "accepted" %>
-              <%= f.submit "Accepter", class: "btn btn-success btn-choice" %>
+              <%= f.submit "Accept", class: "btn btn-success btn-choice" %>
             <% end %>
+
+
             <%= simple_form_for [@party, booking] do |f| %>
               <%= f.input :status, as: :hidden, value: "declined" %>
-              <%= f.submit "Refuser", class: "btn btn-danger" %>
+              <%= f.submit "Reject", class: "btn btn-danger" %>
             <% end %>
+
             </div>
           </li>
         <% end %>
       </ul>
   </div>
+
       <% end %>
     <% elsif  @user_booking.blank? %>
+
     <%= render 'bookings/form' %>
     <% else %>
-      <h3> Vous avez déjà fait une demande </h3>
-      <h4>
-      <%= link_to "Annulez votre réservation", booking_path(@user_booking.first), method: :delete, data: { confirm: "Etes vous sûrs de vouloir annuler votre réservation?" } %>
-      </h4>
+      <h3 class = "host-message" id = "red-message"> Request already sent </h3>
+
+        <%= link_to party_path(@party), method: :delete, data: { confirm: "Êtes vous sûrs de vouloir annuler votre soirée?"} do %>
+                <i class="fa fa-times"></i>
+      <% end %>
+
+
     <% end %>
   <% else %>
     <h1 class = "book" >Book now!</h1>
