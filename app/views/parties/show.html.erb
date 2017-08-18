@@ -13,7 +13,8 @@
         <h3 class="show-card-title"><strong><%=  @party.title %></strong></h3>
           <div class="avatar-group">
 
-          <%= image_tag @party.user.photo, :class => "show-avatar"%>
+          <%= image_tag @party.user.photo, :class => "show-avatar" %>
+
           <h6 class = "avatar-name"><strong> <%=  @party.user.name %> </strong></h6>
           </div>
        </div>
@@ -33,6 +34,12 @@ music type: <strong><%=  @party.music_type %> </strong></h5>
     <% if @party.user_id == current_user.id %>
 
       <h6 class = "host-message" id ="blue-message">Thank you for hosting this party!</h6>
+
+                    <%= link_to party_path(@party), method: :delete, data: { confirm: "Êtes vous sûrs de vouloir annuler votre soirée?"} do %>
+                <i class="fa fa-times"></i>
+              <% end %>
+
+
 
 
       <% if @party.bookings.blank? %>
