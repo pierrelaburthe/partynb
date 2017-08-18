@@ -20,7 +20,7 @@
             <h1 id= "capacity-number"> 15/08</h1>
             <h5 class ="card-party-music">theme: <strong><%= booking.party.music_type %> </strong> </h5>
 
-              <div class="avatar"></div>
+              <%= image_tag booking.party.user.photo, class: "avatar" %>
 
                     <%= link_to booking_path(booking), method: :delete, data: { confirm: "Êtes-vous sûrs de vouloir annuler votre réservation?"} do %>
                 <i class="fa fa-times"></i>
@@ -40,7 +40,7 @@
               <h1 id= "capacity-number"> 22/10</h1>
               <h5 class ="card-party-music">theme: <strong><%= party.music_type %>
               </strong> </h5>
-              <div class="avatar"></div>
+              <%= image_tag party.user.photo, class: "avatar" %>
 
               <%= link_to party_path(party), method: :delete, data: { confirm: "Êtes vous sûrs de vouloir annuler votre soirée?"} do %>
                 <i class="fa fa-times"></i>
