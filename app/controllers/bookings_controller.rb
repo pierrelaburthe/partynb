@@ -3,7 +3,7 @@ class BookingsController < ApplicationController
 
 before_action :set_user, only: [:create]
 before_action :set_party, except: [:destroy]
-before_action :set_booking, only: [:show, :edit, :destroy]
+before_action :set_booking, only: [:show, :edit, :update, :destroy]
 
   def index
     @bookings = Booking.all
@@ -32,12 +32,11 @@ before_action :set_booking, only: [:show, :edit, :destroy]
 
   def update
     @booking.update(booking_params)
-    redirect_to booking_path(@booking)
+    redirect_to party_path(@party)
   end
 
   def destroy
-
-    @booking.destroy
+     @booking.destroy
      redirect_to parties_path
   end
 

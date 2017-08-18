@@ -9,10 +9,13 @@
 
 <h2 class ="card-party-title"><%= link_to booking.party.title, party_path(booking.party)
                %></h2>
-            <h2 class ="card-status">Status: <%= booking.status %></h2>
 
+            <h2 class ="card-status">Status: <% if booking.status == ("Accepted"||"Declined") %>
+             <%= booking.status %>
+             <% else %>
+             Pending
+             <% end %></h2>
 
-               </h2>
             <h1 id= "capacity-number"> 15/08</h1>
             <h5 class ="card-party-music">theme: <strong><%= booking.party.music_type %> </strong> </h5>
 
