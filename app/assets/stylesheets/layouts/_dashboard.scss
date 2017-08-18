@@ -9,16 +9,19 @@
   color:white;
 }
 
+.fa-times{
+  color: #C02727;
+  position: absolute;
+      top: 10px;
+    right: -29px;
+}
+
 .dashboard-container {
   text-align: center;
   margin-top:20px;
   padding-left:170px;
-    background-image: url(https://static.pexels.com/photos/2143/lights-party-dancing-music.jpg);
     background-size: cover;
-
-
-
-
+background-image: linear-gradient(to bottom left, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url(https://static.pexels.com/photos/2143/lights-party-dancing-music.jpg);
 
   #capacity-number{
   color:black;
