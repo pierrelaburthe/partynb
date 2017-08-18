@@ -7,14 +7,29 @@
           <% @bookings.each do |booking| %>
             <li class="card-party">
 
-            <h2 class ="card-party-title"><%= link_to booking.party.title, party_path(booking.party)
+<h2 class ="card-party-title"><%= link_to booking.party.title, party_path(booking.party)
                %></h2>
+<<<<<<< HEAD
             <h2 class ="card-status">Statut: <%= booking.status %></h2>
              <%= link_to "Annuler votre réservation", booking_path(booking), method: :delete, data: {confirm: "Êtes-vous sûrs de vouloir annuler votre réservation?"}  %>
+=======
+
+            <h2 class ="card-status">Status: <% if booking.status == ("Accepted"||"Declined") %>
+             <%= booking.status %>
+             <% else %>
+             Pending
+             <% end %></h2>
+
+>>>>>>> 8a434179ff91142892f545e59a942a7101d90c13
             <h1 id= "capacity-number"> 15/08</h1>
             <h5 class ="card-party-music">theme: <strong><%= booking.party.music_type %> </strong> </h5>
 
               <div class="avatar"></div>
+
+                    <%= link_to booking_path(booking), method: :delete, data: { confirm: "Êtes-vous sûrs de vouloir annuler votre réservation?"} do %>
+                <i class="fa fa-times"></i>
+                         <% end %>
+                <%= link_to "", party_path(booking.party), class: "card-link" %>
             </li>
           <% end %>
         </ul>
@@ -25,15 +40,17 @@
           <% @user.parties.each do |party| %>
 
             <li class="card-party">
-              <h2 class ="card-party-title"><%= link_to party.title, party_path(party) %>
-                <%= link_to party_path(party), method: :delete, data: { confirm: "Êtes vous sûrs de vouloir annuler votre soirée?"} do %>
-                <i class="fa fa-times"></i>
-              <% end %>
-              </h2>
+              <h2 class ="card-party-title"><%= link_to party.title, party_path(party) %></h2>
               <h1 id= "capacity-number"> 22/10</h1>
               <h5 class ="card-party-music">theme: <strong><%= party.music_type %>
               </strong> </h5>
               <div class="avatar"></div>
+
+              <%= link_to party_path(party), method: :delete, data: { confirm: "Êtes vous sûrs de vouloir annuler votre soirée?"} do %>
+                <i class="fa fa-times"></i>
+              <% end %>
+            <%= link_to "", party_path(party), class: "card-link" %>
+
             </li>
           <% end %>
       </ul>

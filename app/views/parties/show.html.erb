@@ -42,12 +42,12 @@
         <% @party.bookings.each do |booking| %>
           <li>
             <%= booking.user.name %> - <%= booking.message %>
-            <%= simple_form_for [@party, @booking] do |f| %>
+            <%= simple_form_for [@party, booking] do |f| %>
               <%= f.input :status, as: :hidden, value: "accepted" %>
               <%= f.submit "Accepter", class: "btn btn-success" %>
             <% end %>
 
-            <%= simple_form_for [@party, @booking] do |f| %>
+            <%= simple_form_for [@party, booking] do |f| %>
               <%= f.input :status, as: :hidden, value: "declined" %>
               <%= f.submit "Refuser", class: "btn btn-danger" %>
             <% end %>
