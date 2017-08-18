@@ -16,15 +16,15 @@ puts 'creating new classes'
 
 
 
-user1 = User.new(email: "laburthe@gmail.com", password: "laburtheee", name: "Pierre Laburte", age: 23)
+user1 = User.new(email: "laburthe@gmail.com", password: "laburtheee", name: "Pierre Laburte", age: 23, remote_photo_url: "https://static.pexels.com/photos/114999/pexels-photo-114999.jpeg")
 user1.save!
-user2 = User.new(email: "donati@gmail.com", password: "donatiii", name: "Pierre Donati", age: 23)
+user2 = User.new(email: "donati@gmail.com", password: "donatiii", name: "Pierre Donati", age: 23, remote_photo_url: "https://static.pexels.com/photos/457446/pexels-photo-457446.jpeg")
 user2.save!
-user3 = User.new(email: "seror@gmail.com", password: "serorrrr", name: "Elliot Seror", age: 24)
+user3 = User.new(email: "seror@gmail.com", password: "serorrrr", name: "Elliot Seror", age: 24, remote_photo_url: "https://static.pexels.com/photos/442559/pexels-photo-442559.jpeg")
 user3.save!
-user4 = User.new(email: "yannickblakime@gmail.com", password: "blakimyyyy", name: "Yanick Blackime ", age: 25)
+user4 = User.new(email: "yannickblakime@gmail.com", password: "blakimyyyy", name: "Yanick Blackime ", age: 25, remote_photo_url: "https://www.pexels.com/photo/adult-blur-close-up-daylight-241456/")
 user4.save!
-user5 = User.new(email: "partynbmailtest@gmail.com", password: "partynbppey", name: "partynb", age: 25)
+user5 = User.new(email: "partynbmailtest@gmail.com", password: "partynbppey", name: "partynb", age: 25, remote_photo_url: "https://static.pexels.com/photos/123318/pexels-photo-123318.jpeg")
 user5.save!
 
 party1 = Party.new(title: "Pool party de ouf", capacity: 18, music_type: "justin bieber", price: 30, user: user1, address: "27 rue de Ménilmontant", remote_photo_url: "https://static.pexels.com/photos/7283/garden.jpg")
