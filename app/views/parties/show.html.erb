@@ -1,87 +1,74 @@
-
-  <div class="banner-party" style="background-image: linear-gradient(-225deg, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.3) 50%), url('https://static.pexels.com/photos/105933/pexels-photo-105933.jpeg'); height: 50vh; background-position: center;">
+<div class="banner-party" style="background-image: linear-gradient(-225deg, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.3) 50%), url('https://static.pexels.com/photos/105933/pexels-photo-105933.jpeg'); height: 50vh; background-position: center;">
     <h2 class="party-title"><%=  @party.title %></h2>
-
   </div>
-
   <div class="container-party">
-    <div class="header-party-details">
-      <div class="row">
-        <div class="col-xs-12 col-sm-6 col-sm-offset-1 container-details">
-          <div class="host-details"><%= image_tag "pierre.png", :class => "avatar"%>
-          <div class="avatar-text">
-          <h4><strong><%=  @party.title %></strong></h4>
-          <h5>by <strong> <%=  @party.user.name %> </strong></h5>
-           </div>
+  <div class="row">
+<div class="col-xs-12 col-sm-6 col-sm-offset-1 container-details">
+    <div class="show-card">
+      <div class="show-card-header">
+        <h3 class="show-card-title"><strong><%=  @party.title %></strong></h3>
+          <div class="avatar-group">
+          <%= image_tag "pierre.png", :class => "show-avatar"%>
+          <h6 class = "avatar-name"><strong> <%=  @party.user.name %> </strong></h6>
           </div>
-          <div class="party-info">
-
-          <h5><strong><%=  @party.capacity %></strong> people wanted!</h5>
-          <h5>music type: <strong><%=  @party.music_type %> </strong></h5>
-          <h5><%= @party.address %></h5>
+          </div>
+          <div class="show-card-body">
+          <h5><i class="fa fa-users" aria-hidden="true"></i> <br/>
+          <strong><%=  @party.capacity %>
+          </strong> people wanted!</h5>
+          <h5><i class="fa fa-music" aria-hidden="true"></i><br/>
+music type: <strong><%=  @party.music_type %> </strong></h5>
+          <h5><i class="fa fa-map-marker" aria-hidden="true"></i><br/>
+<%= @party.address %></h5>
           </div>
         </div>
     </div>
     </div>
-
   <% if user_signed_in? %>
-
     <% if @party.user_id == current_user.id %>
-
-      <h1>Thank you for hosting this party!</h1>
-      <%= link_to "Cancel this party", party_path(@party), method: :delete, data: { confirm: "Etes vous sûrs de vouloir annuler votre soirée?" } %>
-
+      <h6 class = "host-message">Thank you for hosting this party!</h6>
+                    <%= link_to party_path(@party), method: :delete, data: { confirm: "Êtes vous sûrs de vouloir annuler votre soirée?"} do %>
+                <i class="fa fa-times"></i>
+              <% end %>
       <% if @party.bookings.blank? %>
       <h4>You have no demand for your party yet</h4>
-
       <% else %>
-
+<div class="demand-box">
         <h3>Demands for your party</h3>
-
       <ul>
         <% @party.bookings.each do |booking| %>
-          <li>
+          <li >
             <%= booking.user.name %> - <%= booking.message %>
+            <div class = "host-choice">
             <%= simple_form_for [@party, booking] do |f| %>
               <%= f.input :status, as: :hidden, value: "accepted" %>
-              <%= f.submit "Accepter", class: "btn btn-success" %>
+              <%= f.submit "Accepter", class: "btn btn-success btn-choice" %>
             <% end %>
-
             <%= simple_form_for [@party, booking] do |f| %>
               <%= f.input :status, as: :hidden, value: "declined" %>
               <%= f.submit "Refuser", class: "btn btn-danger" %>
             <% end %>
+            </div>
           </li>
         <% end %>
       </ul>
-
+  </div>
       <% end %>
-
-
     <% elsif  @user_booking.blank? %>
-      <h1 class = "book" id="bookmsg" >Book now!</h1>
-      <%= render 'bookings/form' %>
-
+<!--       <h1 class = "book" id="bookmsg" >Book now!</h1>
+ -->      <%= render 'bookings/form' %>
     <% else %>
       <h3> Vous avez déjà fait une demande </h3>
       <h4>
-
       <%= link_to "Annulez votre réservation", booking_path(@user_booking.first), method: :delete, data: { confirm: "Etes vous sûrs de vouloir annuler votre réservation?" } %>
-
       </h4>
     <% end %>
-
-
   <% else %>
-
     <h1 class = "book" >Book now!</h1>
         <%= render 'bookings/form' %>
   <% end %>
-
 </div>
-
  <div id="map"></div>
-
 <% content_for(:after_js) do %>
       <script>
         document.addEventListener("DOMContentLoaded", () => {
@@ -99,9 +86,6 @@
         });
       </script>
     <% end %>
-
-
-
 <% content_for :after_js do %>
   <% javascript_tag do %>
   <script>
@@ -109,21 +93,5 @@
       let coord = <%= raw @party_coordinates.to_json %>;
         alert('Flat coordinates are' + coord.lat + ',' + coord.lng);
     });
-
   <% end %>
 <% end %>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
