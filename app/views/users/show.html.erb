@@ -10,6 +10,7 @@
 <h2 class ="card-party-title"><%= link_to booking.party.title, party_path(booking.party)
                %></h2>
 
+
             <h2 class ="card-status">Status: <% if booking.status == ("Accepted"||"Declined") %>
              <%= booking.status %>
              <% else %>
@@ -51,6 +52,7 @@
       </ul>
     </div>
   </div>
+
 </div>
 
 </div>
