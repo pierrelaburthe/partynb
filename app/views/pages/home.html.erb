@@ -18,6 +18,7 @@
 
                <h5 class ="card-party-music">theme: <strong><%= party.music_type %>
               </strong> </h5>
+              <%= image_tag party.user.photo, class: "avatar" %>
               <div class="avatar"></div>
               <%= link_to "", party_path(party), class: "card-link" %>
             </li>

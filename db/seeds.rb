@@ -22,7 +22,7 @@ user2 = User.new(email: "donati@gmail.com", password: "donatiii", name: "Pierre 
 user2.save!
 user3 = User.new(email: "seror@gmail.com", password: "serorrrr", name: "Elliot Seror", age: 24, remote_photo_url: "https://static.pexels.com/photos/442559/pexels-photo-442559.jpeg")
 user3.save!
-user4 = User.new(email: "yannickblakime@gmail.com", password: "blakimyyyy", name: "Yanick Blackime ", age: 25, remote_photo_url: "https://www.pexels.com/photo/adult-blur-close-up-daylight-241456/")
+user4 = User.new(email: "yannickblakime@gmail.com", password: "blakimyyyy", name: "Yanick Blackime ", age: 25, remote_photo_url: "https://static.pexels.com/photos/175687/pexels-photo-175687.jpeg")
 user4.save!
 user5 = User.new(email: "partynbmailtest@gmail.com", password: "partynbppey", name: "partynb", age: 25, remote_photo_url: "https://static.pexels.com/photos/123318/pexels-photo-123318.jpeg")
 user5.save!

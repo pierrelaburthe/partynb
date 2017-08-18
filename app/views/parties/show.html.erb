@@ -1,18 +1,22 @@
-<div class="banner-party" style="background-image: linear-gradient(-225deg, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.3) 50%), url('https://static.pexels.com/photos/105933/pexels-photo-105933.jpeg'); height: 50vh; background-position: center;">
+
+
+  <div class="banner-party" style="background-image: linear-gradient(-225deg, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.3) 50%), url('<%= image_path @party.photo %>'); height: 50vh; background-position: center;">
+
     <h2 class="party-title"><%=  @party.title %></h2>
   </div>
   <div class="container-party">
+
   <div class="row">
 <div class="col-xs-12 col-sm-6 col-sm-offset-1 container-details">
     <div class="show-card">
       <div class="show-card-header">
         <h3 class="show-card-title"><strong><%=  @party.title %></strong></h3>
           <div class="avatar-group">
-          <%= image_tag "pierre.png", :class => "show-avatar"%>
+          <%= image_tag @party.user.photo, :class => "show-avatar"%>
           <h6 class = "avatar-name"><strong> <%=  @party.user.name %> </strong></h6>
           </div>
-          </div>
-          <div class="show-card-body">
+       </div>
+       <div class="show-card-body">
           <h5><i class="fa fa-users" aria-hidden="true"></i> <br/>
           <strong><%=  @party.capacity %>
           </strong> people wanted!</h5>
@@ -55,8 +59,7 @@ music type: <strong><%=  @party.music_type %> </strong></h5>
   </div>
       <% end %>
     <% elsif  @user_booking.blank? %>
-<!--       <h1 class = "book" id="bookmsg" >Book now!</h1>
- -->      <%= render 'bookings/form' %>
+    <%= render 'bookings/form' %>
     <% else %>
       <h3> Vous avez déjà fait une demande </h3>
       <h4>
